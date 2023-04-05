@@ -1,0 +1,6 @@
+.button {
+  @apply w-8 h-8 flex justify-center items-center rounded-md bg-black cursor-pointer;
+}
+.icon {
+  @apply w-6 h-6 text-white;
+}

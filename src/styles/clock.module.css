@@ -1,0 +1,6 @@
+.clock {
+  @apply flex justify-center items-center bg-black rounded-md text-white font-[500] px-10 h-8;
+}
+.time {
+  @apply absolute;
+}

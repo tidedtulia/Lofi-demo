@@ -12,39 +12,13 @@ export default function FullScreen(props: IFullScreenProps) {
     const element = document.getElementById("screen");
     if (icon === fullicon) {
       setIcon(exitFull);
-      if (element.mozRequestFullScreen) {
-        // Cho trình duyệt Firefox
-        element.mozRequestFullScreen();
-      } else if (element.webkitRequestFullscreen) {
-        // Cho trình duyệt Chrome, Safari và Opera
-        element.webkitRequestFullscreen();
-      } else if (element.msRequestFullscreen) {
-        // Cho trình duyệt Edge
-        element.msRequestFullscreen();
-      } else if (element.webkitEnterFullscreen) {
-        // Cho trình duyệt Cốc Cốc
-        element.webkitEnterFullscreen();
-      } else if (element.webkitEnterFullScreen) {
-        // Cho trình duyệt Cốc Cốc phiên bản cũ hơn
-        element.webkitEnterFullScreen();
+      if (element?.requestFullscreen) {
+        element.requestFullscreen();
       }
     } else {
       setIcon(fullicon);
-      if (document.mozCancelFullScreen) {
-        // Cho trình duyệt Firefox
-        document.mozCancelFullScreen();
-      } else if (document.webkitExitFullscreen) {
-        // Cho trình duyệt Chrome, Safari và Opera
-        document.webkitExitFullscreen();
-      } else if (document.msExitFullscreen) {
-        // Cho trình duyệt Edge
-        document.msExitFullscreen();
-      } else if (document.webkitExitFullscreen) {
-        // Cho trình duyệt Cốc Cốc
-        document.webkitExitFullscreen();
-      } else if (document.webkitCancelFullScreen) {
-        // Cho trình duyệt Cốc Cốc phiên bản cũ hơn
-        document.webkitCancelFullScreen();
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
       }
     }
   };

@@ -13,16 +13,16 @@ export default function Music(props: IMusicProps) {
     icon: play,
   });
   const [numMusic, setNumMusic] = React.useState<number>(1);
-  const audioRef = React.useRef(null);
+  const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const handlePlay = () => {
     const audio = audioRef.current;
     if (isPlaying.isPlay === true) {
       setIsPlaying({ isPlay: false, icon: play });
-      audio.pause();
+      audio?.pause();
     } else {
       setIsPlaying({ isPlay: true, icon: play_pause });
-      audio.play();
+      audio?.play();
     }
   };
 
@@ -42,10 +42,13 @@ export default function Music(props: IMusicProps) {
     }
   };
   const [volume, setVolume] = React.useState(0.5);
-  const changeVolume = (e) => {
-    const audio = audioRef.current;
-    audio.volume = e.target.value;
-    setVolume(e.target.value);
+  const changeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(e.target.value);
+    setVolume(value);
+
+    if (audioRef.current) {
+      audioRef.current.volume = value;
+    }
   };
   const [stateVolume, setStateVolume] = React.useState(0);
   const handleOpenVolume = () => {

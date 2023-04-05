@@ -1,0 +1,6 @@
+.container {
+  @apply w-16 h-8 rounded-full flex;
+}
+.button {
+  @apply w-8 h-8 bg-white rounded-full transition-all duration-500;
+}

@@ -4,6 +4,7 @@ import { logo } from "@/files/file";
 import Clock from "../Clock";
 import FullScreen from "../FullScreen";
 import Music from "../Music";
+import Toggle from "../Toggle";
 export interface IHeaderProps {}
 
 export default function Header(props: IHeaderProps) {
@@ -12,6 +13,7 @@ export default function Header(props: IHeaderProps) {
       <img src={logo} alt="" className={style.logo} />
       <div className={style.control}>
         <Clock />
+        <Toggle />
         <Music />
         <FullScreen />
       </div>

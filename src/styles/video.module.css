@@ -1,3 +1,4 @@
 .video {
   @apply absolute object-cover w-full h-full top-0 left-0;
+  transition: opacity 0.5s ease-in-out;
 }

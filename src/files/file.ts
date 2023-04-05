@@ -8,3 +8,12 @@ export const outside_night_stoprain =
   "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602885/lofi/outside-night_kfb4nn.mp4";
 export const outside_night_rain =
   "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602889/lofi/outside-night-rain_tl4qkz.mp4";
+
+export const inside_day_stoprain =
+  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602886/lofi/inside_b3a5ti.mp4";
+export const inside_day_rain =
+  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602889/lofi/inside-rain_zkd07g.mp4";
+export const inside_night_stoprain =
+  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602886/lofi/inside-night_x9ejvr.mp4";
+export const inside_night_rain =
+  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602889/lofi/inside-night-rain_jdfgw5.mp4";

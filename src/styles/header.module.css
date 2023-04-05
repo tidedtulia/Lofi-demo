@@ -1,5 +1,5 @@
 .container {
-  @apply z-10 w-full px-10 flex flex-row justify-between absolute top-0;
+  @apply w-full px-10 flex flex-row justify-between;
 }
 .logo {
   @apply w-44;

@@ -1,5 +1,10 @@
 import * as React from "react";
 import style from "@/styles/music.module.css";
+
+import { changeVolumeAudio } from "@/slice/sound.slice";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store";
+
 export interface IMusicProps {}
 
 export default function Music(props: IMusicProps) {
@@ -41,11 +46,14 @@ export default function Music(props: IMusicProps) {
       setNumMusic((prev) => prev - 1);
     }
   };
-  const [volume, setVolume] = React.useState(0.5);
+  //const [volume, setVolume] = React.useState(0.5);
+  const volume = useSelector((state: RootState) => state.sound.audio);
+  const dispatch = useDispatch();
+
   const changeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
-    setVolume(value);
-
+    //setVolume(value);
+    dispatch(changeVolumeAudio(value));
     if (audioRef.current) {
       audioRef.current.volume = value;
     }

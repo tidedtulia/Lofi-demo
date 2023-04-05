@@ -11,12 +11,12 @@ import {
   outside_night_rain,
 } from "@/files/file";
 import Video from "../Video";
+import Button from "../Button";
 
 export interface IOutsideProps {}
 
 export default function Outside(props: IOutsideProps) {
   const caseSlice: Case = useSelector((state: RootState) => state.case);
-
   return (
     <div className={style.container}>
       <div className={style.video}>

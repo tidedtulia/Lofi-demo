@@ -1,6 +1,5 @@
 .container {
   @apply w-full h-full bg-[rgba(0,0,0,0.5)];
-  transition: opacity 0.5s ease-in-out;
 }
 .video {
   @apply w-full h-full;

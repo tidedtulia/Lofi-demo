@@ -59,12 +59,6 @@ export default function Sound(props: ISoundProps) {
 
   return (
     <div>
-      {/* <audio
-        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"
-        autoPlay
-        loop
-        preload="auto"
-      ></audio> */}
       <audio
         ref={rainRef}
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"

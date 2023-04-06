@@ -2,3 +2,31 @@
   @apply absolute object-cover w-full h-full top-0 left-0;
   transition: opacity 0.5s ease-in-out;
 }
+.bg_in {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  transition: all 1s ease-in-out;
+  transition-property: opacity;
+  background-color: transparent;
+  width: 100%;
+  z-index: 1;
+}
+.bg_out {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  /* display: none; */
+  transition: opacity 1s;
+  transition-property: opacity;
+  background-color: transparent;
+  width: 100%;
+  z-index: 1;
+}

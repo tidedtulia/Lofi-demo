@@ -60,40 +60,34 @@ export default function Sound(props: ISoundProps) {
 
   return (
     <div>
-      <ReactAudioPlayer
-        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"
-        autoPlay
-        loop
-        preload="auto"
-      />
       <audio
         ref={rainRef}
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"
         autoPlay
         loop
         preload="auto"
-      ></audio>
+      />
       <audio
         ref={trafficRef}
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752449/lofi/sounds/city_traffic_v4hfjq.mp3"
         autoPlay
         loop
         preload="auto"
-      ></audio>
+      />
       <audio
         ref={keyboardRef}
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752450/lofi/sounds/keyboard_ujvpge.mp3"
         autoPlay
         loop
         preload="auto"
-      ></audio>
+      />
       <audio
         ref={peopleRef}
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752456/lofi/sounds/people_talk_inside_rzfzoz.mp3"
         autoPlay
         loop
         preload="auto"
-      ></audio>
+      />
     </div>
   );
 }

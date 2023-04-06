@@ -18,6 +18,8 @@ export default function Video(props: IVideoProps) {
   const { location, day, weather } = useSelector(
     (state: RootState) => state.case
   );
+  console.log({ location, day, weather });
+
   const activeVideo = location + "-" + day + "-" + weather;
   // let src = "";
   // if (location == "outside") {
@@ -49,6 +51,7 @@ export default function Video(props: IVideoProps) {
   //     }
   //   }
   // }
+  console.log(activeVideo);
 
   return (
     <div className="w-full h-[100vh]">
@@ -152,7 +155,7 @@ export default function Video(props: IVideoProps) {
       </div>
       <div
         className={`${
-          activeVideo === "inside-night-stop-rain" ? style.bg_in : style.bg_out
+          activeVideo === "inside-night-rain" ? style.bg_in : style.bg_out
         }`}
       >
         <video

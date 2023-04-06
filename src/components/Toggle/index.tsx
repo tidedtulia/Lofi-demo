@@ -19,7 +19,7 @@ export default function Toggle(props: IToggleProps) {
   return (
     <div
       className={`${style.container} ${
-        day == "day" ? "bg-yellow-400" : "bg-gray-400"
+        day == "day" ? "bg-yellow-400" : "bg-[rgba(0,0,0,0.3)]"
       }`}
     >
       <span

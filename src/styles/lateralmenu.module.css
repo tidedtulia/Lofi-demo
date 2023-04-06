@@ -1,0 +1,19 @@
+.container {
+  @apply w-10 h-40 rounded-md bg-[rgba(0,0,0,0.5)] mx-10 mt-[8%] flex flex-col justify-between items-center;
+}
+.item {
+  @apply relative w-10 h-10 rounded-md flex items-center justify-center;
+}
+.item:hover {
+  @apply bg-[rgba(255,255,255,0.2)];
+}
+.icon {
+  @apply w-6 h-6 text-white;
+}
+.title {
+  @apply text-white font-bold bg-[rgba(0,0,0,0.5)] px-2 py-1 rounded-md absolute left-[-70px] opacity-0;
+}
+.item:hover .title {
+  @apply opacity-100;
+  transition: opacity 0.5s ease-in-out;
+}

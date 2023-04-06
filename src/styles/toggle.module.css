@@ -1,5 +1,5 @@
 .container {
-  @apply w-16 h-8 rounded-full flex;
+  @apply w-16 h-8 rounded-full flex items-center justify-between transition-all duration-500;
 }
 .button {
   @apply w-8 h-8 bg-white rounded-full transition-all duration-500;

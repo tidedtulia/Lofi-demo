@@ -5,6 +5,8 @@ import ControllerOutSide from "../ControllerOutSide";
 import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import ControllerInSide from "../ControllerInSide";
+import LateralMenu from "../LateralMenu";
+import Sound from "../Sound";
 export interface IControllerProps {}
 
 export default function Controller(props: IControllerProps) {
@@ -12,8 +14,11 @@ export default function Controller(props: IControllerProps) {
   return (
     <div className={style.container}>
       <Header />
-      {location == "outside" ? <ControllerOutSide /> : <ControllerInSide />}
-      {/* {location == "inside" && <ControllerInSide />} */}
+      <div className="flex flex-row justify-between items-center">
+        {location == "outside" ? <ControllerOutSide /> : <ControllerInSide />}
+        <LateralMenu />
+      </div>
+      <Sound />
     </div>
   );
 }

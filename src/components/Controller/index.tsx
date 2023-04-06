@@ -7,6 +7,7 @@ import { RootState } from "@/store";
 import ControllerInSide from "../ControllerInSide";
 import LateralMenu from "../LateralMenu";
 import Sound from "../Sound";
+
 export interface IControllerProps {}
 
 export default function Controller(props: IControllerProps) {
@@ -18,6 +19,7 @@ export default function Controller(props: IControllerProps) {
         {location == "outside" ? <ControllerOutSide /> : <ControllerInSide />}
         <LateralMenu />
       </div>
+
       <Sound />
     </div>
   );

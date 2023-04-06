@@ -1,6 +1,19 @@
 .container {
-  @apply w-16 h-8 rounded-full flex items-center justify-between transition-all duration-500;
+  @apply lg:w-16 lg:h-8 w-12 h-6 rounded-full flex items-center justify-between transition-all duration-500;
 }
 .button {
-  @apply w-8 h-8 bg-white rounded-full transition-all duration-500;
+  @apply lg:w-8 lg:h-8 w-6 h-6 bg-white rounded-full transition-all duration-500;
+}
+
+.container_day {
+  @apply bg-yellow-400;
+}
+.container_night {
+  @apply bg-[rgba(0,0,0,0.3)];
+}
+.button_day {
+  @apply mr-6 lg:mr-8;
+}
+.button_night {
+  @apply ml-6 lg:ml-8;
 }

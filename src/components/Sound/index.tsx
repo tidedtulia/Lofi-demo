@@ -9,6 +9,7 @@ export default function Sound(props: ISoundProps) {
   const { rain, traffic, keyboard, people } = useSelector(
     (state: RootState) => state.sound
   );
+  console.log({ rain, traffic, keyboard, people });
 
   return (
     <div>

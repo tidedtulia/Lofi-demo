@@ -17,3 +17,12 @@
   @apply opacity-100;
   transition: opacity 0.5s ease-in-out;
 }
+
+.mixer {
+  @apply opacity-0 -z-10;
+  transition: opacity 0.5s ease-in-out;
+}
+.openmixer {
+  @apply opacity-100 z-50;
+  transition: opacity 0.5s ease-in-out;
+}

@@ -1,0 +1,49 @@
+.container {
+  @apply w-64 left-[35%] top-[5%]  p-2 lg:p-5 lg:w-80  absolute lg:top-[35%] lg:left-[35%]  rounded-lg bg-[#272018];
+}
+.mood {
+  @apply flex flex-col items-center mb-4;
+}
+.mood_title {
+  @apply text-white font-bold pb-2;
+}
+.mood_menu {
+  @apply p-2 w-full h-[30%] rounded-lg bg-[#2f2923] flex flex-row justify-between items-center;
+}
+.mood_menu_item {
+  @apply basis-1/3 flex flex-col justify-center items-center;
+}
+.mood_menu_bg_icon {
+  @apply w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-white flex justify-center items-center;
+}
+.mood_menu_item_title {
+  @apply text-white font-bold text-xs mt-1 lg:mt-2 lg:text-base;
+}
+.icon {
+  @apply w-6 h-6 lg:w-8 lg:h-8;
+}
+
+.music_volume {
+  @apply flex flex-col items-center rounded-lg bg-white p-1 lg:p-2 mb-4;
+}
+.music_volume_title {
+  @apply text-black font-bold lg:pb-2;
+}
+.music_volume_range {
+  @apply w-[90%];
+}
+.sounds {
+  @apply w-full flex flex-col justify-between items-center rounded-lg bg-[#2f2923];
+}
+.sounds_title {
+  @apply text-white font-bold lg:pb-2;
+}
+.sounds_list {
+  @apply w-full flex flex-col justify-between items-center;
+}
+.sounds_item {
+  @apply w-[90%] flex flex-row justify-between items-center my-2 lg:my-2;
+}
+.sounds_item_title {
+  @apply text-white font-bold text-xs lg:text-base;
+}

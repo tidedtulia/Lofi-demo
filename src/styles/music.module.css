@@ -8,7 +8,7 @@
   @apply w-10 h-8 flex justify-center items-center;
 }
 .icon {
-  @apply w-6 h-6 text-white;
+  @apply w-6 lg:h-6 text-white;
 }
 .volume {
   @apply w-40 py-2 absolute top-16 bg-black rounded-md flex items-center justify-center;

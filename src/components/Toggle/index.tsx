@@ -19,11 +19,13 @@ export default function Toggle(props: IToggleProps) {
   return (
     <div
       className={`${style.container} ${
-        day == "day" ? "bg-yellow-400" : "bg-[rgba(0,0,0,0.3)]"
+        day == "day" ? style.container_day : style.container_night
       }`}
     >
       <span
-        className={`${style.button} ${day == "day" ? "mr-8" : "ml-8"}`}
+        className={`${style.button} ${
+          day == "day" ? style.button_day : style.button_night
+        }`}
         onClick={handleChangeDay}
       ></span>
     </div>

@@ -1,6 +1,7 @@
 import * as React from "react";
 import { RootState } from "@/store";
 import { useSelector } from "react-redux";
+import ReactAudioPlayer from "react-audio-player";
 
 export interface ISoundProps {}
 
@@ -59,6 +60,12 @@ export default function Sound(props: ISoundProps) {
 
   return (
     <div>
+      <ReactAudioPlayer
+        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"
+        autoPlay
+        loop
+        preload="auto"
+      />
       <audio
         ref={rainRef}
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"

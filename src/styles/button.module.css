@@ -5,6 +5,7 @@
 .circle_hover {
   @apply h-8 w-8 flex flex-col items-center justify-center border-2 border-white rounded-full;
 }
+
 .popover_action:hover .circle_hover {
   @apply border-yellow-500;
   transition: all 0.3s ease-in-out;

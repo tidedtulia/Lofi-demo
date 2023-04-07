@@ -14,32 +14,32 @@ export default function Sound(props: ISoundProps) {
   return (
     <div>
       <ReactAudioPlayer
-        volume={rain}
+        preload="auto"
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"
+        volume={rain}
         autoPlay
         loop
-        preload="auto"
       />
       <ReactAudioPlayer
-        volume={traffic}
+        preload="auto"
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752449/lofi/sounds/city_traffic_v4hfjq.mp3"
+        volume={traffic}
         autoPlay
         loop
-        preload="auto"
       />
       <ReactAudioPlayer
-        volume={keyboard}
+        preload="auto"
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752450/lofi/sounds/keyboard_ujvpge.mp3"
+        volume={keyboard}
         autoPlay
         loop
-        preload="auto"
       />
       <ReactAudioPlayer
-        volume={people}
+        preload="auto"
         src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752456/lofi/sounds/people_talk_inside_rzfzoz.mp3"
+        volume={people}
         autoPlay
         loop
-        preload="auto"
       />
     </div>
   );

@@ -2,6 +2,7 @@ import * as React from "react";
 import style from "@/styles/music.module.css";
 
 import { changeVolumeAudio } from "@/slice/sound.slice";
+import { changeTypeMusic, changeNumMusic } from "@/slice/music.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 
@@ -17,7 +18,7 @@ export default function Music(props: IMusicProps) {
     isPlay: false,
     icon: play,
   });
-  const [numMusic, setNumMusic] = React.useState<number>(1);
+  const { type, num } = useSelector((state: RootState) => state.music);
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const handlePlay = () => {
@@ -32,18 +33,34 @@ export default function Music(props: IMusicProps) {
   };
 
   const handleNext = () => {
-    if (numMusic == 6) {
-      setNumMusic(1);
-    } else {
-      setNumMusic((prev) => prev + 1);
+    if (type == 1) {
+      if (num == 101) {
+        dispatch(changeNumMusic(1));
+      } else {
+        dispatch(changeNumMusic(num + 1));
+      }
+    } else if (type == 2) {
+      if (num == 18) {
+        dispatch(changeNumMusic(1));
+      } else {
+        dispatch(changeNumMusic(num + 1));
+      }
     }
   };
 
   const handlePrev = () => {
-    if (numMusic == 1) {
-      setNumMusic(6);
-    } else {
-      setNumMusic((prev) => prev - 1);
+    if (type == 1) {
+      if (num == 1) {
+        dispatch(changeNumMusic(101));
+      } else {
+        dispatch(changeNumMusic(num - 1));
+      }
+    } else if (type == 2) {
+      if (num == 1) {
+        dispatch(changeNumMusic(18));
+      } else {
+        dispatch(changeNumMusic(num - 1));
+      }
     }
   };
   //const [volume, setVolume] = React.useState(0.5);
@@ -63,6 +80,7 @@ export default function Music(props: IMusicProps) {
     if (stateVolume == 0) setStateVolume(1);
     else setStateVolume(0);
   };
+
   return (
     <div className={style.container}>
       <div className={style.control}>
@@ -147,7 +165,7 @@ export default function Music(props: IMusicProps) {
       <audio
         autoPlay
         ref={audioRef}
-        src={`${`https://res.cloudinary.com/dp7dspftn/video/upload/v1680677685/lofi/music/${numMusic}.mp3`}`}
+        src={`${`https://res.cloudinary.com/dp7dspftn/video/upload/v1680677685/lofi/music-${type}/${num}.mp3`}`}
         onEnded={handleNext}
       />
     </div>

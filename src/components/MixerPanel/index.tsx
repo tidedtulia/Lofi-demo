@@ -9,12 +9,14 @@ import {
   changeVolumePeople,
   changeVolumeKeyboard,
 } from "@/slice/sound.slice";
+import { changeType } from "@/slice/music.slice";
 export interface IMixerPanelProps {}
 
 export default function MixerPanel(props: IMixerPanelProps) {
   const { audio, rain, traffic, people, keyboard } = useSelector(
     (state: RootState) => state.sound
   );
+  const { type, num } = useSelector((state: RootState) => state.music);
   const dispatch = useDispatch();
 
   const handleChangeVolumeAudio = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -42,12 +44,24 @@ export default function MixerPanel(props: IMixerPanelProps) {
     dispatch(changeVolumeKeyboard(value));
   };
 
+  const handleChangeType = (t: number) => {
+    if (t == type) return;
+    else {
+      dispatch(changeType(t));
+    }
+  };
+
   return (
     <div className={style.container}>
       <div className={style.mood}>
         <p className={style.mood_title}>Music</p>
         <div className={style.mood_menu}>
-          <div className={style.mood_menu_item}>
+          <div
+            className={`${style.mood_menu_item} ${
+              type == 1 && style.mood_active
+            }`}
+            onClick={() => handleChangeType(1)}
+          >
             <div className={style.mood_menu_bg_icon}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +78,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
             </div>
             <p className={style.mood_menu_item_title}>Sleepy</p>
           </div>
-          <div className={style.mood_menu_item}>
+          <div
+            className={`${style.mood_menu_item} ${
+              type == 2 && style.mood_active
+            }`}
+            onClick={() => handleChangeType(2)}
+          >
             <div className={style.mood_menu_bg_icon}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"

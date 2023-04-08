@@ -1,0 +1,46 @@
+.container {
+  @apply w-64 p-5 lg:w-80 absolute right-[10%] top-[30%] lg:top-[25%] lg:right-[7%] rounded-lg backdrop-blur-[50px] border-2 flex flex-col items-end justify-between text-white font-bold;
+}
+.title {
+  @apply w-full text-center mb-2;
+}
+.hide_element {
+  @apply w-full flex flex-row justify-between items-center mb-2;
+}
+
+.toogle {
+  @apply lg:w-16 lg:h-8 w-12 h-6 rounded-full flex items-center justify-between transition-all duration-500;
+}
+.toogle_true {
+  @apply bg-yellow-400;
+}
+.toogle_false {
+  @apply bg-[rgba(0,0,0,0.3)];
+}
+.toogle_button {
+  @apply lg:w-8 lg:h-8 w-6 h-6 bg-white rounded-full transition-all duration-500;
+}
+.toogle_button_true {
+  @apply ml-6 lg:ml-8;
+}
+.toogle_button_false {
+  @apply mr-6 lg:mr-8;
+}
+.comment {
+  @apply text-xs font-thin mb-2;
+}
+.hire_after {
+  @apply w-full flex flex-row justify-between items-center;
+}
+.hire_after_title {
+  @apply w-[50%];
+}
+.hire_after_number {
+  @apply w-[50%] flex flex-row justify-evenly items-center;
+}
+.hire_after_input {
+  @apply w-[30%]  outline-none bg-none text-yellow-500 bg-transparent;
+}
+.hire_after_number p {
+  @apply w-[50%] text-yellow-500;
+}

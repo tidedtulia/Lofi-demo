@@ -45,7 +45,7 @@
   @apply text-white font-bold lg:pb-2;
 }
 .sounds_list {
-  @apply w-full flex flex-col justify-between items-center;
+  @apply w-full h-40 flex flex-col justify-between items-center overflow-y-auto;
 }
 .sounds_item {
   @apply w-[90%] flex flex-row justify-between items-center my-2 lg:my-2;

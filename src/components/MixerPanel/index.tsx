@@ -8,14 +8,26 @@ import {
   changeVolumeTraffic,
   changeVolumePeople,
   changeVolumeKeyboard,
+  changeVolumeTrain,
+  changeVolumeThunder,
+  changeVolumeForestNight,
+  changeVolumeCampfire,
 } from "@/slice/sound.slice";
 import { changeType } from "@/slice/music.slice";
 export interface IMixerPanelProps {}
 
 export default function MixerPanel(props: IMixerPanelProps) {
-  const { audio, rain, traffic, people, keyboard } = useSelector(
-    (state: RootState) => state.sound
-  );
+  const {
+    audio,
+    rain,
+    traffic,
+    people,
+    keyboard,
+    train,
+    thunder,
+    forest_night,
+    campfire,
+  } = useSelector((state: RootState) => state.sound);
   const { type, num } = useSelector((state: RootState) => state.music);
   const dispatch = useDispatch();
 
@@ -42,6 +54,29 @@ export default function MixerPanel(props: IMixerPanelProps) {
   ) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeKeyboard(value));
+  };
+
+  const handleChangeVolumeTrain = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(e.target.value);
+    dispatch(changeVolumeTrain(value));
+  };
+  const handleChangeVolumeThunder = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const value = parseFloat(e.target.value);
+    dispatch(changeVolumeThunder(value));
+  };
+  const handleChangeVolumeForestNight = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const value = parseFloat(e.target.value);
+    dispatch(changeVolumeForestNight(value));
+  };
+  const handleChangeVolumeCampfire = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    const value = parseFloat(e.target.value);
+    dispatch(changeVolumeCampfire(value));
   };
 
   const handleChangeType = (t: number) => {
@@ -177,6 +212,50 @@ export default function MixerPanel(props: IMixerPanelProps) {
               step="0.1"
               value={keyboard}
               onChange={handleChangeVolumeKeyboard}
+            />
+          </div>
+          <div className={style.sounds_item}>
+            <p className={style.sounds_item_title}>Train</p>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={train}
+              onChange={handleChangeVolumeTrain}
+            />
+          </div>
+          <div className={style.sounds_item}>
+            <p className={style.sounds_item_title}>Thunder</p>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={thunder}
+              onChange={handleChangeVolumeThunder}
+            />
+          </div>
+          <div className={style.sounds_item}>
+            <p className={style.sounds_item_title}>Forest Night</p>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={forest_night}
+              onChange={handleChangeVolumeForestNight}
+            />
+          </div>
+          <div className={style.sounds_item}>
+            <p className={style.sounds_item_title}>Campfire</p>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              value={campfire}
+              onChange={handleChangeVolumeCampfire}
             />
           </div>
         </div>

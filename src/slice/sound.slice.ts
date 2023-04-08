@@ -11,6 +11,10 @@ const initialState = {
   stateKeyboard: false,
   people: 0,
   statePeople: false,
+  train: 0,
+  thunder: 0,
+  forest_night: 0,
+  campfire: 0,
 };
 const soundSlice = createSlice({
   name: "sound",
@@ -30,6 +34,18 @@ const soundSlice = createSlice({
     },
     changeVolumePeople: (state, action) => {
       state.people = action.payload;
+    },
+    changeVolumeTrain: (state, action) => {
+      state.train = action.payload;
+    },
+    changeVolumeThunder: (state, action) => {
+      state.thunder = action.payload;
+    },
+    changeVolumeForestNight: (state, action) => {
+      state.forest_night = action.payload;
+    },
+    changeVolumeCampfire: (state, action) => {
+      state.campfire = action.payload;
     },
     openButtonRain: (state) => {
       state.rain = 0.5;
@@ -72,6 +88,10 @@ export const {
   changeVolumeTraffic,
   changeVolumeKeyboard,
   changeVolumePeople,
+  changeVolumeTrain,
+  changeVolumeThunder,
+  changeVolumeForestNight,
+  changeVolumeCampfire,
 
   openButtonRain,
   closeButtonRain,

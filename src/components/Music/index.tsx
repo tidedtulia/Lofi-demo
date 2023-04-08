@@ -19,6 +19,16 @@ export default function Music(props: IMusicProps) {
     icon: play,
   });
   const { type, num } = useSelector((state: RootState) => state.music);
+
+  // React.useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await fetch(`/api/hello?id=${type}`);
+  //     const data = await res.json();
+  //     console.log(data);
+  //   };
+  //   fetchData();
+  // }, [type]);
+
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
   const handlePlay = () => {
@@ -63,17 +73,18 @@ export default function Music(props: IMusicProps) {
       }
     }
   };
-  //const [volume, setVolume] = React.useState(0.5);
+  const { audio } = useSelector((state: RootState) => state.sound);
+  React.useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = audio;
+    }
+  }, [audio]);
   const volume = useSelector((state: RootState) => state.sound.audio);
   const dispatch = useDispatch();
 
   const changeVolume = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
-    //setVolume(value);
     dispatch(changeVolumeAudio(value));
-    if (audioRef.current) {
-      audioRef.current.volume = value;
-    }
   };
   const [stateVolume, setStateVolume] = React.useState(0);
   const handleOpenVolume = () => {

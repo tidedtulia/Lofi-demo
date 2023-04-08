@@ -2,6 +2,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Case } from "@/types/case";
 
 const initialState: Case = {
+  type: "loficafe",
   location: "outside",
   day: "day",
   weather: "stop-rain",

@@ -1,11 +1,11 @@
 .container {
-  @apply h-96 right-[10%] top-[5%] lg:h-96  absolute lg:top-[15%] lg:right-[7%]  rounded-lg bg-[#272018];
+  @apply h-32 right-[10%] top-[40%] lg:h-80  absolute lg:top-[25%] lg:right-[7%]  rounded-lg bg-[#272018] overflow-y-scroll overflow-x-hidden;
 }
 .item {
   @apply w-full m-5 relative cursor-pointer;
 }
 .title {
-  @apply text-[#ccb79f] text-xl font-bold absolute top-[50%] left-[30%];
+  @apply text-[#ccb79f] text-xl font-bold absolute lg:top-[50%] lg:left-[30%] top-[30%] left-[20%];
 }
 .img {
   @apply w-44 lg:w-64;

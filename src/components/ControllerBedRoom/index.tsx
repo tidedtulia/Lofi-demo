@@ -68,7 +68,7 @@ export default function ControllerBedRoom(props: IControllerBedRoomProps) {
           changeVolumeSound={changeVolumeKeyboardButton}
         />
       </div>
-      <div className="absolute top-[20%] right-[20%]">
+      <div className="absolute lg:top-[20%] lg:right-[22%] top-[30%] right-[15%]">
         <Button
           title="City Rain"
           type="audio"

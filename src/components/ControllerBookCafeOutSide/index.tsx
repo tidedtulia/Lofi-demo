@@ -66,7 +66,7 @@ export default function ControllerBookCafeOutSide(
           changeVolumeSound={changeVolumeRainButton}
         />
       </div>
-      <div className="absolute top-[40%] left-[65%]">
+      <div className="absolute lg:top-[40%] lg:left-[55%] top-[35%] left-[50%]">
         <Button title="Inside" type="position" action={handleInside} />
       </div>
       <div className="absolute top-[65%] right-[15%]">

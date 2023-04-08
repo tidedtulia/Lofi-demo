@@ -81,10 +81,10 @@ export default function ControllerBookCafeInside(
 
   return (
     <div className="w-full h-full">
-      <div className="absolute  top-[40%] left-[50%]">
+      <div className="absolute  lg:top-[40%] lg:left-[50%] top-[40%] left-[50%]">
         <Button title="Outside" type="position" action={hadleOutside} />
       </div>
-      <div className="absolute top-[70%] right-[10%]">
+      <div className="absolute lg:top-[70%] lg:right-[10%] top-[65%] right-[15%]">
         <Button
           title="Keyboard"
           type="audio"
@@ -104,7 +104,7 @@ export default function ControllerBookCafeInside(
           changeVolumeSound={changeVolumePeopleButton}
         />
       </div> */}
-      <div className="absolute top-[20%] left-[15%]">
+      <div className="absolute lg:top-[20%] lg:left-[15%] top-[20%] left-[10%]">
         <Button
           title="City Rain"
           type="audio"

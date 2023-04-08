@@ -1,5 +1,5 @@
 .container {
-  @apply w-64 left-[35%] top-[10%]  p-2 lg:p-5 lg:w-80  absolute lg:top-[35%] lg:left-[35%]  rounded-lg bg-[#272018];
+  @apply w-64 left-[35%] top-[10%]  p-2 lg:p-5 lg:w-80  absolute lg:top-[25%] lg:left-[35%]  rounded-lg backdrop-blur-[50px] border-2;
 }
 .mood {
   @apply flex flex-col items-center mb-4;
@@ -8,7 +8,7 @@
   @apply text-white font-bold pb-2;
 }
 .mood_menu {
-  @apply p-2 w-full h-[30%] rounded-lg bg-[#2f2923] flex flex-row justify-between items-center;
+  @apply p-2 w-full h-[30%] rounded-lg backdrop-blur-[10px] border-2 flex flex-row justify-between items-center;
 }
 .mood_menu_item {
   @apply basis-1/3 flex flex-col justify-center items-center;
@@ -30,16 +30,16 @@
 }
 
 .music_volume {
-  @apply flex flex-col items-center rounded-lg bg-white p-1 lg:p-2 mb-4;
+  @apply flex flex-col items-center rounded-lg backdrop-blur-[10px] border-2 p-1 lg:p-2 mb-4;
 }
 .music_volume_title {
-  @apply text-black font-bold lg:pb-2;
+  @apply text-white font-bold lg:pb-2;
 }
 .music_volume_range {
   @apply w-[90%];
 }
 .sounds {
-  @apply w-full flex flex-col justify-between items-center rounded-lg bg-[#2f2923];
+  @apply w-full flex flex-col justify-between items-center rounded-lg backdrop-blur-[10px] border-2;
 }
 .sounds_title {
   @apply text-white font-bold lg:pb-2;

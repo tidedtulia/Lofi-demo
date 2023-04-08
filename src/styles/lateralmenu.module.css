@@ -26,3 +26,11 @@
   @apply opacity-100 z-50;
   transition: opacity 0.5s ease-in-out;
 }
+.scenes {
+  @apply opacity-0 -z-10;
+  transition: opacity 0.5s ease-in-out;
+}
+.openscenes {
+  @apply opacity-100 z-50;
+  transition: opacity 0.5s ease-in-out;
+}

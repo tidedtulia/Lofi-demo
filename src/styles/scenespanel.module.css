@@ -1,0 +1,12 @@
+.container {
+  @apply h-96 right-[10%] top-[5%] lg:h-96  absolute lg:top-[15%] lg:right-[7%]  rounded-lg bg-[#272018];
+}
+.item {
+  @apply w-full m-5 relative cursor-pointer;
+}
+.title {
+  @apply text-[#ccb79f] text-xl font-bold absolute top-[50%] left-[30%];
+}
+.img {
+  @apply w-44 lg:w-64;
+}

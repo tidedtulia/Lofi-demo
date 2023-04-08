@@ -1,10 +1,12 @@
 import * as React from "react";
 import style from "@/styles/lateralmenu.module.css";
 import MixerPanel from "../MixerPanel";
+import ScenesPanel from "../ScenesPanel";
 export interface ILateralMenuProps {}
 
 export default function LateralMenu(props: ILateralMenuProps) {
   const [stateMixer, setStateMixer] = React.useState<boolean>(false);
+  const [stateScenes, setStateScenes] = React.useState<boolean>(false);
   return (
     <div className={style.container}>
       <div className={style.item} onClick={() => setStateMixer(!stateMixer)}>
@@ -24,7 +26,7 @@ export default function LateralMenu(props: ILateralMenuProps) {
           />
         </svg>
       </div>
-      <div className={style.item}>
+      <div className={style.item} onClick={() => setStateScenes(!stateScenes)}>
         <p className={style.title}>Scenes</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +58,9 @@ export default function LateralMenu(props: ILateralMenuProps) {
       </div>
       <div className={`${style.mixer} ${stateMixer && style.openmixer}`}>
         <MixerPanel />
+      </div>
+      <div className={`${style.scenes} ${stateScenes && style.openscenes}`}>
+        <ScenesPanel />
       </div>
     </div>
   );

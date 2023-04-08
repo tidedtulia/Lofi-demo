@@ -11,6 +11,12 @@ const caseSlice = createSlice({
   name: "state",
   initialState: initialState,
   reducers: {
+    changeType: (state, action: PayloadAction<string>) => {
+      state.type = action.payload;
+      state.location = "outside";
+
+      state.weather = "stop-rain";
+    },
     changeLocation: (state, action: PayloadAction<string>) => {
       state.location = action.payload;
     },
@@ -23,5 +29,5 @@ const caseSlice = createSlice({
   },
 });
 const { actions, reducer } = caseSlice;
-export const { changeLocation, changeDay, changeWeather } = actions;
+export const { changeType, changeLocation, changeDay, changeWeather } = actions;
 export default reducer;

@@ -1,5 +1,4 @@
 import * as React from "react";
-import style from "@/styles/controlleroutside.module.css";
 import Button from "../Button";
 
 import { changeLocation, changeWeather } from "@/slice/case.slice";
@@ -13,17 +12,18 @@ import {
 } from "@/slice/sound.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
+export interface IControllerBookCafeOutSideProps {}
 
-export interface IControllerOutSideProps {}
-
-export default function ControllerOutSide(props: IControllerOutSideProps) {
+export default function ControllerBookCafeOutSide(
+  props: IControllerBookCafeOutSideProps
+) {
   const weather = useSelector((state: RootState) => state.case.weather);
   const { rain, traffic } = useSelector((state: RootState) => state.sound);
 
   const { stateRain } = useSelector((state: RootState) => state.sound);
-
   const { stateTraffic } = useSelector((state: RootState) => state.sound);
   const dispatch = useDispatch();
+
   const handleInside = () => {
     dispatch(changeLocation("inside"));
   };
@@ -54,9 +54,8 @@ export default function ControllerOutSide(props: IControllerOutSideProps) {
     const v = parseFloat(e.target.value);
     dispatch(changeVolumeTraffic(v));
   };
-
   return (
-    <div className={style.container}>
+    <div className="w-full h-full">
       <div className="absolute top-[40%] left-[20%]">
         <Button
           title="City Rain"
@@ -67,10 +66,10 @@ export default function ControllerOutSide(props: IControllerOutSideProps) {
           changeVolumeSound={changeVolumeRainButton}
         />
       </div>
-      <div className="absolute top-[50%] left-[40%]">
+      <div className="absolute top-[40%] left-[65%]">
         <Button title="Inside" type="position" action={handleInside} />
       </div>
-      <div className="absolute top-[40%] left-[65%]">
+      <div className="absolute top-[65%] right-[15%]">
         <Button
           title="City Traffic"
           type="audio"

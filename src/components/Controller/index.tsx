@@ -7,16 +7,32 @@ import { RootState } from "@/store";
 import ControllerInSide from "../ControllerInSide";
 import LateralMenu from "../LateralMenu";
 import Sound from "../Sound";
+import ControllerBookCafeOutSide from "../ControllerBookCafeOutSide";
+import ControllerBookCafeInside from "../ControllerBookCafeInSide";
+import ControllerBedRoom from "../ControllerBedRoom";
 
 export interface IControllerProps {}
 
 export default function Controller(props: IControllerProps) {
-  const location = useSelector((state: RootState) => state.case.location);
+  const { type, location } = useSelector((state: RootState) => state.case);
   return (
     <div className={style.container}>
       <Header />
       <div className="flex flex-row justify-between items-center">
-        {location == "outside" ? <ControllerOutSide /> : <ControllerInSide />}
+        {type == "loficafe" &&
+          (location == "outside" ? (
+            <ControllerOutSide />
+          ) : (
+            <ControllerInSide />
+          ))}
+
+        {type == "bookcafe" &&
+          (location == "outside" ? (
+            <ControllerBookCafeOutSide />
+          ) : (
+            <ControllerBookCafeInside />
+          ))}
+        {type == "bedroom" && <ControllerBedRoom />}
         <LateralMenu />
       </div>
 

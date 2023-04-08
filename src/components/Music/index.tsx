@@ -19,15 +19,16 @@ export default function Music(props: IMusicProps) {
     icon: play,
   });
   const { type, num } = useSelector((state: RootState) => state.music);
-
-  // React.useEffect(() => {
-  //   const fetchData = async () => {
-  //     const res = await fetch(`/api/hello?id=${type}`);
-  //     const data = await res.json();
-  //     console.log(data);
-  //   };
-  //   fetchData();
-  // }, [type]);
+  const [url, setUrl] = React.useState<string>("");
+  React.useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`/api/hello?id=${type}&index=${num}`);
+      const data = await res.json();
+      setUrl(data.item);
+    };
+    fetchData();
+  }, [type, num]);
+  console.log({ url });
 
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
@@ -176,8 +177,9 @@ export default function Music(props: IMusicProps) {
       <audio
         autoPlay
         ref={audioRef}
-        src={`${`https://res.cloudinary.com/dp7dspftn/video/upload/v1680677685/lofi/music-${type}/${num}.mp3`}`}
+        src={url}
         onEnded={handleNext}
+        //`${`https://res.cloudinary.com/dp7dspftn/video/upload/v1680677685/lofi/music-${type}/${num}.mp3`}`
       />
     </div>
   );

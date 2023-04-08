@@ -9,7 +9,7 @@ cloudinary.v2.config({
 });
 
 type Data = {
-  list: Array<string>;
+  item: string;
 };
 
 export default async function handler(
@@ -17,14 +17,18 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const { id } = req.query;
-  const folder = "lofi/music-" + id + "/";
-  console.log(folder);
-
-  const { resources } = await cloudinary.v2.api.resources({
-    type: "upload",
-    prefix: folder,
-    max_results: 100,
-  });
-  const urls = resources.map((rs: any) => rs.secure_url);
-  res.status(200).json({ list: urls });
+  const folder = "lofi/music-" + id;
+  const a: number = Number(req.query.index) - 1;
+  const { resources } = await cloudinary.v2.api.resources(
+    {
+      type: "upload",
+      prefix: folder,
+      resource_type: "video",
+    },
+    (err, result) => {
+      const resource = result.resources[a];
+      const secureUrl = resource.secure_url;
+      return res.json({ item: secureUrl });
+    }
+  );
 }

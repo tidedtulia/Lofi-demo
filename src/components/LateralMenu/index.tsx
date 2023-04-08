@@ -64,17 +64,17 @@ export default function LateralMenu(props: ILateralMenuProps) {
         </svg>
       </div>
       <div className={`${style.mixer} ${stateMixer && style.openmixer}`}>
-        <MixerPanel />
+        <MixerPanel state={stateMixer} />
       </div>
       <div className={`${style.scenes} ${stateScenes && style.openscenes}`}>
-        <ScenesPanel />
+        <ScenesPanel state={stateScenes} />
       </div>
       <div
         className={`${style.generalsetting} ${
           stateGeneralSetting && style.opengeneralsetting
         }`}
       >
-        <GeneralSetting />
+        <GeneralSetting state={stateGeneralSetting} />
       </div>
     </div>
   );

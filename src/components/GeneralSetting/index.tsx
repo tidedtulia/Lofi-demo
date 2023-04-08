@@ -3,7 +3,9 @@ import style from "@/styles/generalsetting.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 import { changeHide, changeTime } from "@/slice/hide.slice";
-export interface IGeneralSettingProps {}
+export interface IGeneralSettingProps {
+  state: boolean;
+}
 
 export default function GeneralSetting(props: IGeneralSettingProps) {
   //const [isHide, setIsHide] = React.useState<boolean>(true);
@@ -16,7 +18,7 @@ export default function GeneralSetting(props: IGeneralSettingProps) {
     dispatch(changeTime(parseInt(e.target.value)));
   };
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${!props.state && style.hiden}`}>
       <p className={style.title}>General setting</p>
       <div className={style.hide_element}>
         <p>Hide elements</p>

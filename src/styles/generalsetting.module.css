@@ -1,6 +1,9 @@
 .container {
   @apply w-64 p-5 lg:w-80 absolute right-[10%] top-[30%] lg:top-[25%] lg:right-[7%] rounded-lg backdrop-blur-[50px] border-2 flex flex-col items-end justify-between text-white font-bold;
 }
+.hiden {
+  @apply hidden;
+}
 .title {
   @apply w-full text-center mb-2;
 }

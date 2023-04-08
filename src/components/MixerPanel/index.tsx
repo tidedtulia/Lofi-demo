@@ -14,7 +14,9 @@ import {
   changeVolumeCampfire,
 } from "@/slice/sound.slice";
 import { changeType } from "@/slice/music.slice";
-export interface IMixerPanelProps {}
+export interface IMixerPanelProps {
+  state: boolean;
+}
 
 export default function MixerPanel(props: IMixerPanelProps) {
   const {
@@ -87,7 +89,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
   };
 
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${!props.state && style.hiden}`}>
       <div className={style.mood}>
         <p className={style.mood_title}>Music</p>
         <div className={style.mood_menu}>

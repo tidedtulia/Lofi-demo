@@ -19,7 +19,7 @@
 }
 
 .mixer {
-  @apply opacity-0 -z-10;
+  @apply opacity-0 -z-50;
   transition: opacity 0.5s ease-in-out;
 }
 .openmixer {
@@ -27,7 +27,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 .scenes {
-  @apply opacity-0 -z-10;
+  @apply opacity-0 -z-50;
   transition: opacity 0.5s ease-in-out;
 }
 .openscenes {
@@ -36,7 +36,7 @@
 }
 
 .generalsetting {
-  @apply opacity-0 -z-10;
+  @apply opacity-0 -z-50;
   transition: opacity 0.5s ease-in-out;
 }
 .opengeneralsetting {

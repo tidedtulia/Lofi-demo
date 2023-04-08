@@ -5,7 +5,9 @@ import { closeButtonRain } from "@/slice/sound.slice";
 
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
-export interface IScenesPanelProps {}
+export interface IScenesPanelProps {
+  state: boolean;
+}
 
 export default function ScenesPanel(props: IScenesPanelProps) {
   const { type } = useSelector((state: RootState) => state.case);
@@ -15,7 +17,7 @@ export default function ScenesPanel(props: IScenesPanelProps) {
     dispatch(closeButtonRain());
   };
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${!props.state && style.hiden}`}>
       {type != "loficafe" && (
         <div
           className={style.item}

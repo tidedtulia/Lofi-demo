@@ -14,19 +14,19 @@ export default function Sound(props: ISoundProps) {
   return (
     <div>
       <SoundItem
-        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752454/lofi/sounds/rain_city_umqj8o.mp3"
+        src="https://lofico.nyc3.cdn.digitaloceanspaces.com/effects/rain_city.mp3"
         volume={rain}
       />
       <SoundItem
-        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752449/lofi/sounds/city_traffic_v4hfjq.mp3"
+        src="https://lofico.nyc3.cdn.digitaloceanspaces.com/effects/city_traffic.mp3"
         volume={traffic}
       />
       <SoundItem
-        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752450/lofi/sounds/keyboard_ujvpge.mp3"
+        src="https://lofico.nyc3.cdn.digitaloceanspaces.com/effects/keyboard.mp3"
         volume={keyboard}
       />
       <SoundItem
-        src="https://res.cloudinary.com/dp7dspftn/video/upload/v1680752456/lofi/sounds/people_talk_inside_rzfzoz.mp3"
+        src="https://lofico.nyc3.cdn.digitaloceanspaces.com/effects/people_talk_inside.mp3"
         volume={people}
       />
     </div>

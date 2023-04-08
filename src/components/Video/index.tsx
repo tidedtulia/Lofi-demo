@@ -21,36 +21,7 @@ export default function Video(props: IVideoProps) {
   console.log({ location, day, weather });
 
   const activeVideo = location + "-" + day + "-" + weather;
-  // let src = "";
-  // if (location == "outside") {
-  //   if (day == "day") {
-  //     if (weather == "stop-rain") {
-  //       src = outside_day_stoprain;
-  //     } else {
-  //       src = outside_day_rain;
-  //     }
-  //   } else {
-  //     if (weather == "stop-rain") {
-  //       src = outside_night_stoprain;
-  //     } else {
-  //       src = outside_night_rain;
-  //     }
-  //   }
-  // } else {
-  //   if (day == "day") {
-  //     if (weather == "stop-rain") {
-  //       src = inside_day_stoprain;
-  //     } else {
-  //       src = inside_day_rain;
-  //     }
-  //   } else {
-  //     if (weather == "stop-rain") {
-  //       src = inside_night_stoprain;
-  //     } else {
-  //       src = inside_night_rain;
-  //     }
-  //   }
-  // }
+
   console.log(activeVideo);
 
   return (

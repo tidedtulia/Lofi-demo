@@ -1,5 +1,5 @@
 .container {
-  @apply h-32 right-[10%] top-[40%] lg:h-80  absolute lg:top-[25%] lg:right-[7%]  rounded-lg backdrop-blur-[50px] border-2 overflow-y-scroll overflow-x-hidden;
+  @apply h-32 right-[10%] top-[30%] lg:h-80  absolute lg:top-[25%] lg:right-[7%]  rounded-lg backdrop-blur-[50px] border-2 overflow-y-scroll overflow-x-hidden;
 }
 .item {
   @apply w-full m-5 relative cursor-pointer;

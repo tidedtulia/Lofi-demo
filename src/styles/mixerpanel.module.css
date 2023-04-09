@@ -1,8 +1,12 @@
 .container {
-  @apply w-64 left-[35%] top-[10%]  p-2 lg:p-5 lg:w-80  absolute lg:top-[25%] lg:left-[35%]  rounded-lg backdrop-blur-[50px] border-2;
+  @apply w-64 left-[35%] top-[10%]  p-2 lg:p-5 lg:w-80  absolute lg:top-[25%] lg:left-[35%]  rounded-lg backdrop-blur-[50px] border-2 opacity-100;
+  transition: opacity 0.5s;
 }
 .hiden {
-  @apply hidden;
+  @apply opacity-0;
+  transition: opacity 0.5s;
+  transform: translate(500%, 0);
+  /* @apply hidden; */
 }
 .mood {
   @apply flex flex-col items-center mb-4;

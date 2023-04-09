@@ -1,5 +1,5 @@
 .container {
-  @apply w-10 h-40 rounded-md bg-[rgba(0,0,0,0.5)] lg:mx-10 mx-5 lg:mt-[5%] flex flex-col justify-between items-center;
+  @apply w-10 h-52 rounded-md bg-[rgba(0,0,0,0.5)] lg:mx-10 mx-5 lg:mt-[5%] flex flex-col justify-between items-center;
 }
 .item {
   @apply relative w-10 h-10 rounded-md flex items-center justify-center;

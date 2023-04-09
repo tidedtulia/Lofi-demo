@@ -1,0 +1,65 @@
+.container {
+  @apply flex flex-col justify-between items-center lg:w-64 lg:h-72 w-48 h-56 p-2 rounded-lg backdrop-blur-[50px] border-2 absolute  lg:top-[20%] lg:left-[5%] left-[5%] opacity-100;
+  transition: opacity 0.5s;
+}
+.hiden {
+  @apply opacity-0;
+  transform: translate(-200%, 0);
+
+  /* @apply hidden; */
+}
+.title {
+  @apply text-white font-bold py-1;
+}
+
+/*-------------Button-----------*/
+.button {
+  @apply bg-transparent text-[rgba(255,255,255,.8)] cursor-pointer;
+}
+.button_title {
+  @apply font-bold ml-2 lg:text-xl text-base;
+}
+.with_text {
+  @apply bg-[rgba(255,255,255,.1)] py-1 px-2 rounded-xl leading-9 flex flex-row justify-between items-center;
+}
+.with_text .icon {
+  @apply lg:w-6 lg:h-6 w-4 h-4;
+}
+
+.icon {
+  @apply lg:w-10 lg:h-10 w-8 h-8;
+}
+
+/*---------------Timer--------------*/
+.timer_container {
+  @apply w-full h-full flex flex-col justify-between items-center;
+}
+.CircularProgressbar {
+  @apply w-[50%];
+}
+.timer_buttons {
+  @apply w-[30%] flex flex-row justify-center items-center;
+}
+
+/*--------Setting----------------*/
+.setting_container {
+  @apply w-full h-full flex flex-col justify-evenly items-center;
+}
+.label {
+  @apply block mb-1 mt-2 font-bold text-white;
+}
+.slider {
+  @apply w-[50%] my-0 lg:h-10 h-7 border-2 border-solid border-red-500 rounded-3xl;
+}
+.green {
+  @apply border-2 border-solid border-green-500;
+}
+.thumb {
+  @apply bg-red-500 cursor-pointer lg:w-9 lg:h-9 w-6 h-6 rounded-full;
+}
+.green .thumb {
+  @apply bg-green-500;
+}
+.track {
+  @apply bg-white;
+}

@@ -57,7 +57,7 @@ export default function ControllerOutSide(props: IControllerOutSideProps) {
 
   return (
     <div className={style.container}>
-      <div className="absolute top-[40%] left-[20%]">
+      <div className="absolute lg:top-[40%] lg:left-[20%] top-[40%] left-[10%]">
         <Button
           title="City Rain"
           type="audio"
@@ -67,10 +67,10 @@ export default function ControllerOutSide(props: IControllerOutSideProps) {
           changeVolumeSound={changeVolumeRainButton}
         />
       </div>
-      <div className="absolute top-[50%] left-[40%]">
+      <div className="absolute lg:top-[50%] lg:left-[40%] top-[50%] left-[38%]">
         <Button title="Inside" type="position" action={handleInside} />
       </div>
-      <div className="absolute top-[40%] left-[65%]">
+      <div className="absolute lg:top-[40%] lg:left-[65%] top-[40%] left-[70%]">
         <Button
           title="City Traffic"
           type="audio"

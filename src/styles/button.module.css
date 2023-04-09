@@ -1,5 +1,5 @@
 .popover_action {
-  @apply flex flex-col justify-between items-center w-[150px] z-50;
+  @apply flex flex-col justify-between items-center p-2 z-50;
 }
 
 .circle_hover {
@@ -18,7 +18,7 @@
   transition: all 0.3s ease-in-out;
 }
 .popover_card {
-  @apply w-full rounded-lg bg-[rgba(0,0,0,0.3)] text-center opacity-0;
+  @apply w-[150px] rounded-lg bg-[rgba(0,0,0,0.3)] text-center opacity-0;
 }
 .popover_card p {
   @apply text-white;

@@ -1,0 +1,38 @@
+/*-------todos list------*/
+.todosList {
+  @apply p-2 lg:w-64 lg:h-72 w-48 h-52 flex flex-col justify-between items-center opacity-100  rounded-lg backdrop-blur-[50px] border-2  absolute lg:top-[25%] lg:left-[35%] right-[15%] top-[25%];
+  transition: opacity 0.5s;
+}
+.hiden {
+  @apply opacity-0;
+  transition: opacity 0.5s;
+  transform: translate(500%, 0);
+  /* @apply hidden; */
+}
+.todoList_title {
+  @apply w-full text-center text-white font-bold;
+}
+.todoList_list {
+  @apply w-3/4 h-full flex flex-col justify-start  text-white font-bold;
+}
+.todosList_form {
+  @apply w-full flex justify-center;
+}
+.todosList_form input {
+  @apply w-1/2 outline-none bg-none text-yellow-500 bg-transparent;
+}
+.todosList_form_button {
+  @apply border-none rounded-lg py-1 px-2 text-yellow-500 font-bold;
+}
+.todoItem {
+  @apply w-full flex flex-row justify-between items-center mb-2;
+}
+.todoItem_text {
+  @apply text-yellow-500 font-bold lg:text-xl text-lg;
+}
+.todoItem_text_check {
+  @apply text-white line-through;
+}
+.todoItem_delete {
+  @apply text-white font-bold lg:text-xl text-lg;
+}

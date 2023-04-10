@@ -1,3 +1,7 @@
 .container {
   @apply w-full h-[100vh] bg-black fixed;
 }
+
+.landscape {
+  @apply fixed inset-0 z-[9999] flex flex-col justify-center items-center bg-[#333];
+}

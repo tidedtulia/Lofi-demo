@@ -24,6 +24,8 @@ export default function Music(props: IMusicProps) {
     const fetchData = async () => {
       const res = await fetch(`/api/hello?id=${type}&index=${num}`);
       const data = await res.json();
+      console.log({ data: data.item });
+
       setUrl(data.item);
     };
     fetchData();

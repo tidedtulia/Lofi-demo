@@ -16,7 +16,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <Suspense fallback={<Loading />}>
         <Component {...pageProps} />
-        <Toaster />
       </Suspense>
     </Provider>
   );

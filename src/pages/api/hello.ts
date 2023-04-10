@@ -19,18 +19,25 @@ export default async function handler(
   const { id } = req.query;
   const folder = "lofi/music-" + id;
   const a: number = Number(req.query.index) - 1;
-  console.log(a);
+  console.log({ id, a });
 
-  const { resources } = await cloudinary.v2.api.resources(
-    {
+  try {
+    const { resources } = await cloudinary.v2.api.resources({
       type: "upload",
       prefix: folder,
       resource_type: "video",
-    },
-    (err, result) => {
-      const resource = result.resources[a];
+      max_results: 193,
+    });
+    if (resources.length > a) {
+      const resource = resources[a];
       const secureUrl = resource.secure_url;
       return res.json({ item: secureUrl });
+    } else {
+      // return res.status(404).end()
+      return res.status(404).json({ item: "123" });
     }
-  );
+  } catch (error) {
+    console.error(error);
+    return res.status(500).end();
+  }
 }

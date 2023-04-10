@@ -106,14 +106,18 @@ export default function LateralMenu(props: ILateralMenuProps) {
       </div>
 
       <MixerPanel state={stateMixer} />
+      <ScenesPanel state={stateScenes} />
+      <GeneralSetting state={stateGeneralSetting} />
+      <PomodoroTimerPanel state={stateTimer} />
+      <TodosList state={stateTodosList} />
+
       {/* <div className={`${style.mixer} ${stateMixer && style.openmixer}`}>
         <MixerPanel state={stateMixer} />
       </div> */}
-      <ScenesPanel state={stateScenes} />
+
       {/* <div className={`${style.scenes} ${stateScenes && style.openscenes}`}>
         <ScenesPanel state={stateScenes} />
       </div> */}
-      <GeneralSetting state={stateGeneralSetting} />
 
       {/* <div
         className={`${style.generalsetting} ${
@@ -122,8 +126,6 @@ export default function LateralMenu(props: ILateralMenuProps) {
       >
         <GeneralSetting state={stateGeneralSetting} />
       </div> */}
-      <PomodoroTimerPanel state={stateTimer} />
-      <TodosList state={stateTodosList} />
     </div>
   );
 }

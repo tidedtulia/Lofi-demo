@@ -19,6 +19,8 @@ export default async function handler(
   const { id } = req.query;
   const folder = "lofi/music-" + id;
   const a: number = Number(req.query.index) - 1;
+  console.log(a);
+
   const { resources } = await cloudinary.v2.api.resources(
     {
       type: "upload",

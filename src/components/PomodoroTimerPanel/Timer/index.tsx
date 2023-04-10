@@ -1,6 +1,10 @@
 import * as React from "react";
 import style from "@/styles/pomodorotimer.module.css";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren,
+  buildStyles,
+} from "react-circular-progressbar";
 import PlayButton from "../Button/PlayButton";
 import PauseButton from "../Button/PauseButton";
 import SettingButton from "../Button/SettingButton";
@@ -72,17 +76,24 @@ export default function Timer(props: ITimerProps) {
   const audioRef = React.useRef<HTMLAudioElement>(null);
   return (
     <div className={style.timer_container}>
-      <CircularProgressbar
-        className={style.CircularProgressbar}
-        value={percentage}
-        text={minutes + ":" + seconds}
-        styles={buildStyles({
-          textColor: "#fff",
-          pathColor: mode === "work" ? red : green,
-          trailColor: "rgba(255,255,255,.8)",
-          strokeLinecap: "round",
-        })}
-      />
+      <div className="w-3/5">
+        <CircularProgressbarWithChildren
+          className={style.CircularProgressbar}
+          value={percentage}
+          // text={minutes + ":" + seconds}
+          styles={buildStyles({
+            textColor: "#fff",
+            pathColor: mode === "work" ? red : green,
+            trailColor: "rgba(255,255,255,.8)",
+            strokeLinecap: "round",
+          })}
+        >
+          <p className="text-xl lg:text-2xl text-white">
+            {minutes + ":" + (seconds < 10 ? "0" + seconds : seconds)}
+          </p>
+        </CircularProgressbarWithChildren>
+      </div>
+
       <div className={style.timer_buttons}>
         {isPaused ? (
           <PlayButton

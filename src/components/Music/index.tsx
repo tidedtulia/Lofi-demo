@@ -56,6 +56,12 @@ export default function Music(props: IMusicProps) {
       } else {
         dispatch(changeNumMusic(num + 1));
       }
+    } else if (type == 3) {
+      if (num == 36) {
+        dispatch(changeNumMusic(1));
+      } else {
+        dispatch(changeNumMusic(num + 1));
+      }
     }
   };
 
@@ -69,6 +75,12 @@ export default function Music(props: IMusicProps) {
     } else if (type == 2) {
       if (num == 1) {
         dispatch(changeNumMusic(18));
+      } else {
+        dispatch(changeNumMusic(num - 1));
+      }
+    } else if (type == 3) {
+      if (num == 1) {
+        dispatch(changeNumMusic(36));
       } else {
         dispatch(changeNumMusic(num - 1));
       }

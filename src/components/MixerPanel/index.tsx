@@ -113,7 +113,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </svg>
             </div>
-            <p className={style.mood_menu_item_title}>Sleepy</p>
+            <p className={style.mood_menu_item_title}>Lofi</p>
           </div>
           <div
             className={`${style.mood_menu_item} ${
@@ -137,7 +137,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
             </div>
             <p className={style.mood_menu_item_title}>Chill</p>
           </div>
-          <div className={style.mood_menu_item}>
+          <div
+            className={`${style.mood_menu_item} ${
+              type == 3 && style.mood_active
+            }`}
+            onClick={() => handleChangeType(3)}
+          >
             <div className={style.mood_menu_bg_icon}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -153,7 +158,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </svg>
             </div>
-            <p className={style.mood_menu_item_title}>Another</p>
+            <p className={style.mood_menu_item_title}>Viet Nam</p>
           </div>
         </div>
       </div>

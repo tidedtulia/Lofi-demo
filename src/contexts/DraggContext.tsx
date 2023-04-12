@@ -1,20 +1,24 @@
 import { ReactNode, createContext, useState } from "react";
 
 interface DraggContextType {
-  handleMouseUp: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-  handleMouseDown: (
+  handleMouseUpMixer: () => void;
+  handleMouseDownMixer: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => void;
-  handleMouseMove: (
+  handleMouseMoveMixer: (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => void;
-  style: Object;
+  styleMixer: Object;
 }
 const DraggContext = createContext<DraggContextType>({
-  handleMouseUp: () => {},
-  handleMouseDown: () => {},
-  handleMouseMove: () => {},
-  style: {},
+  handleMouseUpMixer: () => {},
+  handleMouseDownMixer: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {},
+  handleMouseMoveMixer: (
+    event: React.MouseEvent<HTMLDivElement, MouseEvent>
+  ) => {},
+  styleMixer: {},
 });
 
 export interface IDraggProvider {
@@ -27,7 +31,7 @@ const DraggProvider = ({ children }: IDraggProvider) => {
   const [draggedElement, setDraggedElement] = useState<EventTarget | null>(
     null
   );
-  const handleMouseDown = (e: React.MouseEvent) => {
+  const handleMouseDownMixer = (e: React.MouseEvent) => {
     console.log("MouseDown");
 
     setIsDragging(true);
@@ -39,7 +43,7 @@ const DraggProvider = ({ children }: IDraggProvider) => {
     });
   };
 
-  const handleMouseMove = (e: React.MouseEvent) => {
+  const handleMouseMoveMixer = (e: React.MouseEvent) => {
     console.log("MouseMove");
 
     if (!isDragging) return;
@@ -61,14 +65,14 @@ const DraggProvider = ({ children }: IDraggProvider) => {
     }
   };
 
-  const handleMouseUp = () => {
+  const handleMouseUpMixer = () => {
     console.log("MouseUp");
 
     // e.stopPropagation();
     setIsDragging(false);
     setDraggedElement(null);
   };
-  const style = {
+  const styleMixer = {
     position: "absolute",
     top: draggingPosition.y,
     left: draggingPosition.x,
@@ -78,7 +82,12 @@ const DraggProvider = ({ children }: IDraggProvider) => {
 
   return (
     <DraggContext.Provider
-      value={{ handleMouseUp, handleMouseDown, handleMouseMove, style }}
+      value={{
+        handleMouseUpMixer,
+        handleMouseDownMixer,
+        handleMouseMoveMixer,
+        styleMixer,
+      }}
     >
       {children}
     </DraggContext.Provider>

@@ -8,13 +8,9 @@ cloudinary.v2.config({
   api_secret: "Z8bJQqQYJ8He-wSzU6-ZGKITU4E",
 });
 
-type Data = {
-  item: string;
-};
-
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<string>
 ) {
   const { id } = req.query;
   const folder = "lofi/music-" + id;
@@ -31,10 +27,10 @@ export default async function handler(
     if (resources.length > a) {
       const resource = resources[a];
       const secureUrl = resource.secure_url;
-      return res.json({ item: secureUrl });
+      return res.json(secureUrl);
     } else {
       // return res.status(404).end()
-      return res.status(404).json({ item: "123" });
+      return res.status(404).json("error");
     }
   } catch (error) {
     console.error(error);

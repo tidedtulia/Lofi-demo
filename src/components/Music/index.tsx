@@ -21,18 +21,20 @@ export default function Music(props: IMusicProps) {
   const { type, num } = useSelector((state: RootState) => state.music);
   const [url, setUrl] = React.useState<string>("");
   React.useEffect(() => {
+    let result = "";
     const fetchData = async () => {
       const res = await fetch(`/api/hello?id=${type}&index=${num}`);
       const data = await res.json();
-      console.log({ data: data.item });
-      setUrl(data.item);
+      result = data;
+      console.log({ data });
+      setUrl(data);
     };
     fetchData();
-    if (url == "123") {
+    if (result == "error") {
+      console.log("fetch error");
       fetchData();
     }
   }, [type, num]);
-  console.log({ url });
 
   const audioRef = React.useRef<HTMLAudioElement>(null);
 

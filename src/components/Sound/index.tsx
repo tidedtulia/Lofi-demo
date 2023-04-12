@@ -16,8 +16,6 @@ export default function Sound(props: ISoundProps) {
     forest_night,
     campfire,
   } = useSelector((state: RootState) => state.sound);
-  console.log({ rain, traffic, keyboard, people });
-
   return (
     <div>
       <SoundItem

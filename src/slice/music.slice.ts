@@ -1,8 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-const rd = Number(Math.floor(Math.random() * 20) + 1);
+import { max, min } from "@/files/file";
+
 const initialState = {
   type: 1,
-  num: Number(Math.floor(Math.random() * 193) + 1),
+  num: Number(Math.floor(Math.random() * max) + 1),
 };
 const musicSlice = createSlice({
   name: "music",
@@ -16,7 +17,7 @@ const musicSlice = createSlice({
     },
     changeType: (state, action: PayloadAction<number>) => {
       state.type = action.payload;
-      state.num = Number(Math.floor(Math.random() * 20) + 1);
+      state.num = Number(Math.floor(Math.random() * min) + 1);
     },
   },
 });

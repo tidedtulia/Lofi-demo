@@ -1,3 +1,11 @@
+//------------const
+export const max = 194;
+export const min = 21;
+export const type1 = 194;
+export const type2 = 21;
+export const type3 = 39;
+
+//------------logo
 export const logo =
   "https://res.cloudinary.com/dp7dspftn/image/upload/v1680602044/lofi/logo.0cbf9e63b4a021661126_rttu7d.gif";
 export const logo_header =

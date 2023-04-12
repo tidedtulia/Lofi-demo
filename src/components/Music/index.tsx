@@ -6,14 +6,15 @@ import { changeTypeMusic, changeNumMusic } from "@/slice/music.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 
+import { type1, type2, type3 } from "@/files/file";
+const play_pause =
+  "M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z";
+const play =
+  "M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z";
+
 export interface IMusicProps {}
 
 export default function Music(props: IMusicProps) {
-  const play_pause =
-    "M21 7.5V18M15 7.5V18M3 16.811V8.69c0-.864.933-1.406 1.683-.977l7.108 4.061a1.125 1.125 0 010 1.954l-7.108 4.061A1.125 1.125 0 013 16.811z";
-  const play =
-    "M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z";
-
   const [isPlaying, setIsPlaying] = React.useState({
     isPlay: false,
     icon: play,
@@ -51,46 +52,48 @@ export default function Music(props: IMusicProps) {
 
   const handleNext = () => {
     if (type == 1) {
-      if (num == 101) {
+      if (num == type1) {
         dispatch(changeNumMusic(1));
       } else {
         dispatch(changeNumMusic(num + 1));
       }
     } else if (type == 2) {
-      if (num == 18) {
+      if (num == type2) {
         dispatch(changeNumMusic(1));
       } else {
         dispatch(changeNumMusic(num + 1));
       }
     } else if (type == 3) {
-      if (num == 36) {
+      if (num == type3) {
         dispatch(changeNumMusic(1));
       } else {
         dispatch(changeNumMusic(num + 1));
       }
     }
+    setIsPlaying({ isPlay: true, icon: play_pause });
   };
 
   const handlePrev = () => {
     if (type == 1) {
       if (num == 1) {
-        dispatch(changeNumMusic(101));
+        dispatch(changeNumMusic(type1));
       } else {
         dispatch(changeNumMusic(num - 1));
       }
     } else if (type == 2) {
       if (num == 1) {
-        dispatch(changeNumMusic(18));
+        dispatch(changeNumMusic(type2));
       } else {
         dispatch(changeNumMusic(num - 1));
       }
     } else if (type == 3) {
       if (num == 1) {
-        dispatch(changeNumMusic(36));
+        dispatch(changeNumMusic(type3));
       } else {
         dispatch(changeNumMusic(num - 1));
       }
     }
+    setIsPlaying({ isPlay: true, icon: play_pause });
   };
   const { audio } = useSelector((state: RootState) => state.sound);
   React.useEffect(() => {

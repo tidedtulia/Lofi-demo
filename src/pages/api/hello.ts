@@ -1,6 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
+import { max } from "@/files/file";
+
 import cloudinary from "cloudinary";
 cloudinary.v2.config({
   cloud_name: "dp7dspftn",
@@ -22,7 +24,7 @@ export default async function handler(
       type: "upload",
       prefix: folder,
       resource_type: "video",
-      max_results: 193,
+      max_results: max,
     });
     if (resources.length > a) {
       const resource = resources[a];

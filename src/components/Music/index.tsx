@@ -25,10 +25,12 @@ export default function Music(props: IMusicProps) {
       const res = await fetch(`/api/hello?id=${type}&index=${num}`);
       const data = await res.json();
       console.log({ data: data.item });
-
       setUrl(data.item);
     };
     fetchData();
+    if (url == "123") {
+      fetchData();
+    }
   }, [type, num]);
   console.log({ url });
 

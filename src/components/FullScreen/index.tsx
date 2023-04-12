@@ -13,7 +13,7 @@ export default function FullScreen(props: IFullScreenProps) {
     if (icon === fullicon) {
       setIcon(exitFull);
       if (element?.requestFullscreen) {
-        element.requestFullscreen();
+        document.documentElement.requestFullscreen();
       }
     } else {
       setIcon(fullicon);

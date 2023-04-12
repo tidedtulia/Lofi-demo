@@ -4,3 +4,6 @@
 .icon {
   @apply w-6 h-6 text-white;
 }
+.fullScreen {
+  @apply w-full h-full;
+}

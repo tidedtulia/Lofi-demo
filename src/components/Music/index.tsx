@@ -2,7 +2,7 @@ import * as React from "react";
 import style from "@/styles/music.module.css";
 
 import { changeVolumeAudio } from "@/slice/sound.slice";
-import { changeTypeMusic, changeNumMusic } from "@/slice/music.slice";
+import { changeNumMusic } from "@/slice/music.slice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 
@@ -16,8 +16,8 @@ export interface IMusicProps {}
 
 export default function Music(props: IMusicProps) {
   const [isPlaying, setIsPlaying] = React.useState({
-    isPlay: true,
-    icon: play_pause,
+    isPlay: false,
+    icon: play,
   });
   const { type, num } = useSelector((state: RootState) => state.music);
   const [url, setUrl] = React.useState<string>("");
@@ -98,6 +98,7 @@ export default function Music(props: IMusicProps) {
   const { audio } = useSelector((state: RootState) => state.sound);
   React.useEffect(() => {
     if (audioRef.current) {
+      audioRef.current.preload = "none";
       audioRef.current.volume = audio;
     }
   }, [audio]);
@@ -195,13 +196,7 @@ export default function Music(props: IMusicProps) {
           onChange={changeVolume}
         />
       </div>
-      <audio
-        autoPlay
-        ref={audioRef}
-        src={url}
-        onEnded={handleNext}
-        //`${`https://res.cloudinary.com/dp7dspftn/video/upload/v1680677685/lofi/music-${type}/${num}.mp3`}`
-      />
+      <audio autoPlay ref={audioRef} src={url} onEnded={handleNext} />
     </div>
   );
 }

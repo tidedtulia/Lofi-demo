@@ -7,6 +7,6 @@ export interface ISoundItemProps {
 
 export default function SoundItem({ src, volume }: ISoundItemProps) {
   return (
-    <ReactAudioPlayer preload="auto" src={src} volume={volume} autoPlay loop />
+    <ReactAudioPlayer preload="none" src={src} volume={volume} autoPlay loop />
   );
 }

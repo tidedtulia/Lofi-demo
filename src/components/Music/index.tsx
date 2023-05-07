@@ -16,8 +16,8 @@ export interface IMusicProps {}
 
 export default function Music(props: IMusicProps) {
   const [isPlaying, setIsPlaying] = React.useState({
-    isPlay: false,
-    icon: play,
+    isPlay: true,
+    icon: play_pause,
   });
   const { type, num } = useSelector((state: RootState) => state.music);
   const [url, setUrl] = React.useState<string>("");

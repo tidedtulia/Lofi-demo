@@ -1,8 +1,8 @@
 //------------const
-export const max = 194;
-export const min = 21;
-export const type1 = 194;
-export const type2 = 21;
+export const max = 196;
+export const min = 22;
+export const type1 = 196;
+export const type2 = 22;
 export const type3 = 39;
 
 //------------logo

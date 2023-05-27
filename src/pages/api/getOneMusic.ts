@@ -10,14 +10,14 @@ cloudinary.v2.config({
   api_secret: "Z8bJQqQYJ8He-wSzU6-ZGKITU4E",
 });
 
-export default async function handler(
+export default async function getOneMusic(
   req: NextApiRequest,
   res: NextApiResponse<string>
 ) {
   const { id } = req.query;
   const folder = "lofi/music-" + id;
-  const a: number = Number(req.query.index) - 1;
-  console.log({ id, a });
+  const a: number = Number(req.query.index);
+  console.log({ idType: id, number: a });
 
   try {
     const { resources } = await cloudinary.v2.api.resources({
@@ -39,3 +39,4 @@ export default async function handler(
     return res.status(500).end();
   }
 }
+

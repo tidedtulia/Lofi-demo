@@ -24,15 +24,15 @@ export default function Music(props: IMusicProps) {
   React.useEffect(() => {
     let result = "";
     const fetchData = async () => {
-      const res = await fetch(`/api/hello?id=${type}&index=${num}`);
+      const res = await fetch(`/api/getOneMusic?id=${type}&index=${num}`);
       const data = await res.json();
       result = data;
-      console.log({ data });
+      console.log({ music: data, num });
       setUrl(data);
     };
     fetchData();
     if (result == "error") {
-      console.log("fetch error");
+      console.log("fetch music error");
       fetchData();
     }
   }, [type, num]);

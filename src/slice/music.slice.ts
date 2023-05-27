@@ -3,7 +3,7 @@ import { max, min } from "@/files/file";
 
 const initialState = {
   type: 1,
-  num: Number(Math.floor(Math.random() * max) + 1),
+  num: Math.floor(Math.random() * max),
 };
 const musicSlice = createSlice({
   name: "music",

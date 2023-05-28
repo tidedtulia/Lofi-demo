@@ -40,6 +40,8 @@ export default function MixerPanel(props: IMixerPanelProps) {
 
   const [open, setOpen] = React.useState<boolean>(false);
 
+  const scrollRef = React.useRef<any>(null);
+
   React.useEffect(() => {
     const getListMusic = async () => {
       const res = await fetch(`/api/getListMusic?id=${type}`);
@@ -54,6 +56,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
     };
     getListMusic();
   }, [type]);
+
+  React.useEffect(() => {
+    if (num) {
+      scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [num]);
 
   const handleChangeVolumeAudio = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
@@ -325,13 +333,30 @@ export default function MixerPanel(props: IMixerPanelProps) {
             {listMusic.map((music) => (
               <li
                 key={music.index}
-                className={` w-full cursor-pointer text-xs py-2 lg:py-1 ${
+                ref={music.index == num ? scrollRef : null}
+                className={`flex items-center w-full cursor-pointer text-xs py-2 lg:py-1 ${
                   num === music.index ? "text-yellow-500" : "text-white"
                 }`}
                 onClick={() => {
                   dispatch(changeNumMusic(music.index));
                 }}
               >
+                {num === music.index && (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-3 h-3 text-yellow-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                    />
+                  </svg>
+                )}
                 {music.name}
               </li>
             ))}

@@ -53,18 +53,15 @@ export default function MixerPanel(props: IMixerPanelProps) {
       } else {
         setListMusic(data);
       }
-      if (num) {
-        scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-      }
     };
     getListMusic();
-  }, [type, num]);
+  }, [type]);
 
-  // React.useEffect(() => {
-  //   if (num) {
-  //     scrollRef.current?.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // }, [num]);
+  React.useEffect(() => {
+    if (num) {
+      scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [num, open]);
 
   const handleChangeVolumeAudio = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);

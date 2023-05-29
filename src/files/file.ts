@@ -1,6 +1,6 @@
 //------------const
-export const max = 198;
-export const min = 22;
+export const max = 197;
+export const min = 21;
 export const type1 = 197;
 export const type2 = 21;
 export const type3 = 38;

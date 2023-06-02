@@ -1,6 +1,5 @@
 import * as React from "react";
-import style from "@/styles/controllerinside.module.css";
-import Button from "../Button";
+import Button from "@/components/Button";
 import {
   changeVolumeRain,
   openButtonRain,
@@ -17,9 +16,11 @@ import { changeLocation, changeWeather } from "@/slice/case.slice";
 import { useDispatch, useSelector } from "react-redux";
 
 import { RootState } from "@/store";
-export interface IControllerInSideProps {}
+export interface IControllerBookCafeInSideProps {}
 
-export default function ControllerInSide(props: IControllerInSideProps) {
+export default function ControllerBookCafeInSide(
+  props: IControllerBookCafeInSideProps
+) {
   const weather = useSelector((state: RootState) => state.case.weather);
   const dispatch = useDispatch();
   const hadleOutside = () => {
@@ -79,11 +80,11 @@ export default function ControllerInSide(props: IControllerInSideProps) {
   };
 
   return (
-    <div className={style.container}>
-      <div className="absolute  top-[40%] left-[70%]">
+    <div className="w-full h-full">
+      <div className="absolute  lg:top-[40%] lg:left-[50%] top-[40%] left-[50%]">
         <Button title="Outside" type="position" action={hadleOutside} />
       </div>
-      <div className="absolute top-[70%] left-[40%]">
+      <div className="absolute lg:top-[70%] lg:right-[10%] top-[65%] right-[15%]">
         <Button
           title="Keyboard"
           type="audio"
@@ -93,7 +94,7 @@ export default function ControllerInSide(props: IControllerInSideProps) {
           changeVolumeSound={changeVolumeKeyboardButton}
         />
       </div>
-      <div className="absolute top-[70%] left-[60%]">
+      {/* <div className="absolute top-[70%] left-[60%]">
         <Button
           title="People Talks"
           type="audio"
@@ -102,8 +103,8 @@ export default function ControllerInSide(props: IControllerInSideProps) {
           action={handleChangePeople}
           changeVolumeSound={changeVolumePeopleButton}
         />
-      </div>
-      <div className="absolute top-[35%] left-[10%]">
+      </div> */}
+      <div className="absolute lg:top-[20%] lg:left-[15%] top-[20%] left-[10%]">
         <Button
           title="City Rain"
           type="audio"

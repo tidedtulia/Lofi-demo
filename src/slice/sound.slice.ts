@@ -15,6 +15,8 @@ const initialState = {
   thunder: 0,
   forest_night: 0,
   campfire: 0,
+  plane: 0,
+  statePlane: false,
 };
 const soundSlice = createSlice({
   name: "sound",
@@ -46,6 +48,9 @@ const soundSlice = createSlice({
     },
     changeVolumeCampfire: (state, action) => {
       state.campfire = action.payload;
+    },
+    changeVolumePlane: (state, action) => {
+      state.plane = action.payload;
     },
     openButtonRain: (state) => {
       state.rain = 0.5;
@@ -79,6 +84,14 @@ const soundSlice = createSlice({
       state.people = 0;
       state.statePeople = false;
     },
+    openButtonPlane: (state) => {
+      state.plane = 0.5;
+      state.statePlane = true;
+    },
+    closeButtonPlane: (state) => {
+      state.plane = 0;
+      state.statePlane = false;
+    },
   },
 });
 const { actions, reducer } = soundSlice;
@@ -92,6 +105,7 @@ export const {
   changeVolumeThunder,
   changeVolumeForestNight,
   changeVolumeCampfire,
+  changeVolumePlane,
 
   openButtonRain,
   closeButtonRain,
@@ -104,5 +118,8 @@ export const {
 
   openButtonPeople,
   closeButtonPeople,
+
+  openButtonPlane,
+  closeButtonPlane,
 } = actions;
 export default reducer;

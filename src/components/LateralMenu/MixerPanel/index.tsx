@@ -12,6 +12,7 @@ import {
   changeVolumeThunder,
   changeVolumeForestNight,
   changeVolumeCampfire,
+  changeVolumePlane,
 } from "@/slice/sound.slice";
 import { changeType, changeNumMusic } from "@/slice/music.slice";
 import { Music } from "@/types/music";
@@ -30,6 +31,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
     thunder,
     forest_night,
     campfire,
+    plane,
   } = useSelector((state: RootState) => state.sound);
   const { type, num } = useSelector((state: RootState) => state.music);
   const dispatch = useDispatch();
@@ -104,11 +106,17 @@ export default function MixerPanel(props: IMixerPanelProps) {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeForestNight(value));
   };
+
   const handleChangeVolumeCampfire = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeCampfire(value));
+  };
+
+  const handleChangeVolumePlane = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(e.target.value);
+    dispatch(changeVolumePlane(value));
   };
 
   const handleChangeType = (t: number) => {
@@ -302,29 +310,45 @@ export default function MixerPanel(props: IMixerPanelProps) {
                   onChange={handleChangeVolumeCampfire}
                 />
               </div>
+              <div className={style.sounds_item}>
+                <p className={style.sounds_item_title}>Plane</p>
+                <input
+                  className={style.sounds_item_volume}
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value={plane}
+                  onChange={handleChangeVolumePlane}
+                />
+              </div>
             </div>
           </div>
         </div>
-        <div className="w-10 flex flex-row justify-center text-white hover:text-yellow-500">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            className="w-6 h-6 cursor-pointer"
+        <div className="w-6 lg:w-10 flex flex-row justify-center text-white hover:text-yellow-500">
+          <div
+            className="w-full h-10 flex justify-center items-center"
             onClick={() => setOpen(!open)}
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d={`${
-                open
-                  ? "M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
-                  : "M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
-              }`}
-            />
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-4 h-4 lg:w-6 lg:h-6 cursor-pointer"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d={`${
+                  open
+                    ? "M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"
+                    : "M16.28 11.47a.75.75 0 010 1.06l-7.5 7.5a.75.75 0 01-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 011.06-1.06l7.5 7.5z"
+                }`}
+              />
+            </svg>
+          </div>
         </div>
       </div>
       {open && (
@@ -334,7 +358,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
               <li
                 key={music.index}
                 ref={music.index == num ? scrollRef : null}
-                className={`flex items-center w-full cursor-pointer text-xs py-2 lg:py-1 ${
+                className={`flex items-center w-full cursor-pointer text-xs py-1 lg:py-1 ${
                   num === music.index ? "text-yellow-500" : "text-white"
                 }`}
                 onClick={() => {

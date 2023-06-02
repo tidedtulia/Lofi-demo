@@ -2,6 +2,8 @@ import styles from "@/styles/Home.module.css";
 import Controller from "@/components/Controller";
 import Video from "@/components/Video";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+import { loading_logo, rotate_logo } from "@/files/file";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -35,7 +37,7 @@ export default function Home() {
         <div className={styles.landscape} id="landscape">
           <img
             width={120}
-            src="https://res.cloudinary.com/dp7dspftn/image/upload/v1681146978/lofi/rotate_vdfskt.gif"
+            src={rotate_logo}
             alt="Please rotate your device horizontally"
           />
           <h1 className="text-[#ddd]">
@@ -45,11 +47,7 @@ export default function Home() {
       )}
       {isLoading && (
         <div className="fixed inset-0 z-[1000] flex flex-col justify-center items-center bg-[#333]">
-          <img
-            width={120}
-            src="https://res.cloudinary.com/dp7dspftn/image/upload/v1680602044/lofi/logo.0cbf9e63b4a021661126_rttu7d.gif"
-            alt="Loading..."
-          />
+          <img width={120} src={loading_logo} alt="Loading..." />
           <h1 className="text-[#ddd]">Loading.....</h1>
         </div>
       )}
@@ -60,3 +58,4 @@ export default function Home() {
     </>
   );
 }
+

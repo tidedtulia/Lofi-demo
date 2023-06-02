@@ -5,6 +5,9 @@ import { closeButtonRain } from "@/slice/sound.slice";
 
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
+
+import { scene } from "@/files/file";
+
 export interface IScenesPanelProps {
   state: boolean;
 }
@@ -24,13 +27,7 @@ export default function ScenesPanel(props: IScenesPanelProps) {
           onClick={() => handleChangeType("loficafe")}
         >
           <p className={style.title}>Lofi Cafe</p>
-          <img
-            className={style.img}
-            src={
-              "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943047/lofi/cafe-out.0d307fb8651788cfd35c_xmhhvz.png"
-            }
-            alt="Lofi cafe"
-          />
+          <img className={style.img} src={scene.loficafe} alt="Lofi cafe" />
         </div>
       )}
       {type != "bookcafe" && (
@@ -39,25 +36,19 @@ export default function ScenesPanel(props: IScenesPanelProps) {
           onClick={() => handleChangeType("bookcafe")}
         >
           <p className={style.title}>Book Cafe</p>
-          <img
-            className={style.img}
-            src={
-              "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943011/lofi/book-cafe/book_cafe_preview_out.aeae5beef7737b9ae88e_pfaah7.png"
-            }
-            alt="Book cafe"
-          />
+          <img className={style.img} src={scene.bookcafe} alt="Book cafe" />
         </div>
       )}
       {type != "bedroom" && (
         <div className={style.item} onClick={() => handleChangeType("bedroom")}>
           <p className={style.title}>Bedroom</p>
-          <img
-            className={style.img}
-            src={
-              "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943034/lofi/bed-room/Tr%C3%ACnh_ph%C3%A1t_%C4%90a_ph%C6%B0%C6%A1ng_ti%E1%BB%87n_08_04_2023_3_35_51_CH_nxvx5l.png"
-            }
-            alt="Bedroom"
-          />
+          <img className={style.img} src={scene.bedroom} alt="Bedroom" />
+        </div>
+      )}
+      {type != "plane" && (
+        <div className={style.item} onClick={() => handleChangeType("plane")}>
+          <p className={style.title}>Plane</p>
+          <img className={style.img} src={scene.plane} alt="Plane" />
         </div>
       )}
     </div>

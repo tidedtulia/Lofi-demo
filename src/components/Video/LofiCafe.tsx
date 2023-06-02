@@ -3,16 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import style from "@/styles/video.module.css";
 
-import {
-  outside_day_stoprain,
-  outside_day_rain,
-  outside_night_stoprain,
-  outside_night_rain,
-  inside_day_stoprain,
-  inside_day_rain,
-  inside_night_stoprain,
-  inside_night_rain,
-} from "@/files/file";
+import { video } from "@/files/file";
 
 export interface ILofiCafeProps {}
 
@@ -34,7 +25,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={outside_day_stoprain}
+          src={video.loficafe.outside_day_stoprain}
           className={style.video}
           autoPlay
           loop
@@ -48,7 +39,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={outside_day_rain}
+          src={video.loficafe.outside_day_rain}
           className={style.video}
           autoPlay
           loop
@@ -62,7 +53,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={outside_night_stoprain}
+          src={video.loficafe.outside_night_stoprain}
           className={style.video}
           autoPlay
           loop
@@ -76,7 +67,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={outside_night_rain}
+          src={video.loficafe.outside_night_rain}
           className={style.video}
           autoPlay
           loop
@@ -90,7 +81,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={inside_day_stoprain}
+          src={video.loficafe.inside_day_stoprain}
           className={style.video}
           autoPlay
           loop
@@ -104,7 +95,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={inside_day_rain}
+          src={video.loficafe.inside_day_rain}
           className={style.video}
           autoPlay
           loop
@@ -118,7 +109,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={inside_night_stoprain}
+          src={video.loficafe.inside_night_stoprain}
           className={style.video}
           autoPlay
           loop
@@ -132,7 +123,7 @@ export default function LofiCafe(props: ILofiCafeProps) {
         }`}
       >
         <video
-          src={inside_night_rain}
+          src={video.loficafe.inside_night_rain}
           className={style.video}
           autoPlay
           loop

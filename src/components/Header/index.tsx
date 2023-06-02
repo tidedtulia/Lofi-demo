@@ -5,6 +5,7 @@ import Clock from "../Clock";
 import FullScreen from "../FullScreen";
 import Music from "../Music";
 import Toggle from "../Toggle";
+
 export interface IHeaderProps {}
 
 export default function Header(props: IHeaderProps) {

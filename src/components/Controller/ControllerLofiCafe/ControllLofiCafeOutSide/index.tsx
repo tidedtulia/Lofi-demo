@@ -1,6 +1,6 @@
 import * as React from "react";
 import style from "@/styles/controlleroutside.module.css";
-import Button from "../Button";
+import Button from "@/components/Button";
 
 import { changeLocation, changeWeather } from "@/slice/case.slice";
 import {
@@ -14,9 +14,11 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
 
-export interface IControllerOutSideProps {}
+export interface IControllerLofiCafeOutSideProps {}
 
-export default function ControllerOutSide(props: IControllerOutSideProps) {
+export default function ControllerLofiCafeOutSide(
+  props: IControllerLofiCafeOutSideProps
+) {
   const weather = useSelector((state: RootState) => state.case.weather);
   const { rain, traffic } = useSelector((state: RootState) => state.sound);
 

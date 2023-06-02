@@ -1,10 +1,10 @@
 import * as React from "react";
 import style from "@/styles/lateralmenu.module.css";
-import MixerPanel from "../MixerPanel";
-import ScenesPanel from "../ScenesPanel";
-import GeneralSetting from "../GeneralSetting";
-import PomodoroTimerPanel from "../PomodoroTimerPanel";
-import TodosList from "../TodosList";
+import MixerPanel from "./MixerPanel";
+import ScenesPanel from "./ScenesPanel";
+import GeneralSetting from "./GeneralSetting";
+import PomodoroTimerPanel from "./PomodoroTimerPanel";
+import TodosList from "./TodosList";
 export interface ILateralMenuProps {}
 
 export default function LateralMenu(props: ILateralMenuProps) {

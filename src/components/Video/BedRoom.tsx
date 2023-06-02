@@ -3,12 +3,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "@/store";
 import style from "@/styles/video.module.css";
 
-import {
-  bedroom_day_stoprain,
-  bedroom_day_rain,
-  bedroom_night_stoprain,
-  bedroom_night_rain,
-} from "@/files/file";
+import { video } from "@/files/file";
 
 export interface IBedRoomProps {}
 
@@ -27,7 +22,7 @@ export default function BedRoom(props: IBedRoomProps) {
         }`}
       >
         <video
-          src={bedroom_day_stoprain}
+          src={video.bedroom.day_stoprain}
           className={style.video}
           autoPlay
           loop
@@ -39,7 +34,7 @@ export default function BedRoom(props: IBedRoomProps) {
         className={`${activeVideo === "day-rain" ? style.bg_in : style.bg_out}`}
       >
         <video
-          src={bedroom_day_rain}
+          src={video.bedroom.day_rain}
           className={style.video}
           autoPlay
           loop
@@ -53,7 +48,7 @@ export default function BedRoom(props: IBedRoomProps) {
         }`}
       >
         <video
-          src={bedroom_night_stoprain}
+          src={video.bedroom.night_stoprain}
           className={style.video}
           autoPlay
           loop
@@ -67,7 +62,7 @@ export default function BedRoom(props: IBedRoomProps) {
         }`}
       >
         <video
-          src={bedroom_night_rain}
+          src={video.bedroom.night_rain}
           className={style.video}
           autoPlay
           loop

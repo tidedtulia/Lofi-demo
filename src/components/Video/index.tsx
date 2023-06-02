@@ -4,6 +4,7 @@ import { RootState } from "@/store";
 import LofiCafe from "./LofiCafe";
 import BookCafe from "./BookCafe";
 import BedRoom from "./BedRoom";
+import Plane from "./Plane";
 
 export interface IVideoProps {}
 export default function Video(props: IVideoProps) {
@@ -13,6 +14,7 @@ export default function Video(props: IVideoProps) {
       {type == "loficafe" && <LofiCafe />}
       {type == "bookcafe" && <BookCafe />}
       {type == "bedroom" && <BedRoom />}
+      {type == "plane" && <Plane />}
     </>
   );
 }

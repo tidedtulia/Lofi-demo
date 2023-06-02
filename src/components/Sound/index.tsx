@@ -32,7 +32,7 @@ export default function Sound(props: ISoundProps) {
         <SoundItem src={sound.forest_night} volume={forest_night} />
       )}
       {campfire != 0 && <SoundItem src={sound.campfire} volume={campfire} />}
-      {plane != 0 && <SoundItem src={sound.plane} volume={campfire} />}
+      {plane != 0 && <SoundItem src={sound.plane} volume={plane} />}
     </div>
   );
 }

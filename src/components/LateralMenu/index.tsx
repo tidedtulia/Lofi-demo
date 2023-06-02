@@ -16,7 +16,7 @@ export default function LateralMenu(props: ILateralMenuProps) {
   const [stateTodosList, setStateTodosList] = React.useState<boolean>(false);
   return (
     <div className={style.container}>
-      <div className={style.item} onClick={() => setStateMixer(!stateMixer)}>
+      <div className={style.item}>
         <p className={style.title}>Mixer</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +25,7 @@ export default function LateralMenu(props: ILateralMenuProps) {
           strokeWidth={1.5}
           stroke="currentColor"
           className={style.icon}
+          onClick={() => setStateMixer(!stateMixer)}
         >
           <path
             strokeLinecap="round"
@@ -33,13 +34,14 @@ export default function LateralMenu(props: ILateralMenuProps) {
           />
         </svg>
       </div>
-      <div className={style.item} onClick={() => setStateScenes(!stateScenes)}>
+      <div className={style.item}>
         <p className={style.title}>Scenes</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
           className={style.icon}
+          onClick={() => setStateScenes(!stateScenes)}
         >
           <path
             fillRule="evenodd"
@@ -48,16 +50,14 @@ export default function LateralMenu(props: ILateralMenuProps) {
           />
         </svg>
       </div>
-      <div
-        className={style.item}
-        onClick={() => setStateGeneralSetting(!stateGeneralSetting)}
-      >
+      <div className={style.item}>
         <p className={style.title}>Setting</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
           className={style.icon}
+          onClick={() => setStateGeneralSetting(!stateGeneralSetting)}
         >
           <path
             fillRule="evenodd"
@@ -66,13 +66,14 @@ export default function LateralMenu(props: ILateralMenuProps) {
           />
         </svg>
       </div>
-      <div className={style.item} onClick={() => setStateTimer(!stateTimer)}>
+      <div className={style.item}>
         <p className={style.title}>Timer</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
           className={style.icon}
+          onClick={() => setStateTimer(!stateTimer)}
         >
           <path
             fillRule="evenodd"
@@ -81,16 +82,14 @@ export default function LateralMenu(props: ILateralMenuProps) {
           />
         </svg>
       </div>
-      <div
-        className={style.item}
-        onClick={() => setStateTodosList(!stateTodosList)}
-      >
+      <div className={style.item}>
         <p className={style.title}>Todo</p>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
           className={style.icon}
+          onClick={() => setStateTodosList(!stateTodosList)}
         >
           <path
             fillRule="evenodd"

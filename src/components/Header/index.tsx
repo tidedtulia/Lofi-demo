@@ -1,10 +1,10 @@
 import * as React from "react";
 import style from "@/styles/header.module.css";
 import { logo } from "@/files/file";
-import Clock from "../Clock";
-import FullScreen from "../FullScreen";
-import Music from "../Music";
-import Toggle from "../Toggle";
+import Clock from "./Clock";
+import FullScreen from "./FullScreen";
+import Music from "./Music";
+import Toggle from "./Toggle";
 
 export interface IHeaderProps {}
 

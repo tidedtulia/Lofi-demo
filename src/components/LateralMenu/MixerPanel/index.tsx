@@ -131,8 +131,11 @@ export default function MixerPanel(props: IMixerPanelProps) {
   //change potition
   const checkSize = (): boolean => {
     let size: number = 0;
-    if (typeof window !== "undefined") size = window.innerWidth;
-
+    //if (typeof window !== "undefined") size = window.innerWidth;
+    const element = document.getElementById("screen");
+    if (element?.requestFullscreen) {
+      size = parseFloat(document.documentElement.style.width);
+    }
     return size >= 1024 ? true : false;
   };
   const [position, setPosition] = React.useState<Position>({
@@ -431,11 +434,9 @@ export default function MixerPanel(props: IMixerPanelProps) {
         <div
           className={style.listMusics}
           onTouchStart={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
         >
-          <ul
-            className={style.listData}
-            onTouchStart={(e) => e.stopPropagation()}
-          >
+          <ul className={style.listData}>
             {listMusic.map((music) => (
               <li
                 key={music.index}
@@ -446,7 +447,6 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 onClick={() => {
                   dispatch(changeNumMusic(music.index));
                 }}
-                onTouchStart={(e) => e.stopPropagation()}
               >
                 {num === music.index && (
                   <svg

@@ -129,19 +129,26 @@ export default function MixerPanel(props: IMixerPanelProps) {
   };
 
   //change potition
-  const checkSize = (): boolean => {
-    let size: number = 0;
-    //if (typeof window !== "undefined") size = window.innerWidth;
-    const element = document.getElementById("screen");
-    if (element?.requestFullscreen) {
-      size = parseFloat(document.documentElement.style.width);
-    }
-    return size >= 1024 ? true : false;
-  };
+
   const [position, setPosition] = React.useState<Position>({
-    x: checkSize() ? 400 : 200,
-    y: checkSize() ? 150 : 50,
+    x: 0,
+    y: 0,
   });
+
+  React.useEffect(() => {
+    const checkSize = (): boolean => {
+      let element = document.documentElement;
+      let size = 0;
+      if (element) {
+        size = element.clientWidth;
+      }
+      console.log({ size });
+
+      return size >= 1024 ? true : false;
+    };
+    setPosition({ x: checkSize() ? 400 : 200, y: checkSize() ? 150 : 50 });
+  }, []);
+
   const [dragging, setDragging] = React.useState<boolean>(false);
   const [offset, setOffset] = React.useState<Position>({ x: 0, y: 0 });
 
@@ -413,13 +420,13 @@ export default function MixerPanel(props: IMixerPanelProps) {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
               className="w-4 h-4 lg:w-6 lg:h-6 cursor-pointer"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 d={`${
                   open
                     ? "M7.72 12.53a.75.75 0 010-1.06l7.5-7.5a.75.75 0 111.06 1.06L9.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5z"

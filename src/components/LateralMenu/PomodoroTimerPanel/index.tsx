@@ -13,15 +13,22 @@ export default function PomodoroTimerPanel(props: IPomodoroTimerPanelProps) {
   const { setting } = useSelector((state: RootState) => state.pomodoro);
 
   //change postition
-  const checkSize = (): boolean => {
-    let size: number = 0;
-    if (typeof window !== "undefined") size = window.innerWidth;
 
-    return size >= 1024 ? true : false;
-  };
+  React.useEffect(() => {
+    const checkSize = (): boolean => {
+      let size: number = 0;
+      if (typeof window !== "undefined") size = window.innerWidth;
+
+      return size >= 1024 ? true : false;
+    };
+    setPosition({
+      x: checkSize() ? 50 : 0,
+      y: checkSize() ? 150 : 100,
+    });
+  }, []);
   const [position, setPosition] = React.useState<Position>({
-    x: checkSize() ? 50 : 0,
-    y: checkSize() ? 150 : 100,
+    x: 0,
+    y: 0,
   });
   const [dragging, setDragging] = React.useState<boolean>(false);
   const [offset, setOffset] = React.useState<Position>({ x: 0, y: 0 });

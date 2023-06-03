@@ -146,7 +146,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
 
       return size >= 1024 ? true : false;
     };
-    setPosition({ x: checkSize() ? 400 : 200, y: checkSize() ? 150 : 50 });
+    setPosition({ x: checkSize() ? 400 : 250, y: checkSize() ? 150 : 75 });
   }, []);
 
   const [dragging, setDragging] = React.useState<boolean>(false);
@@ -285,7 +285,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
               <p className={style.mood_menu_item_title}>Viet Nam</p>
             </div>
           </div>
-          <div className={style.music_volume}>
+          {/* <div className={style.music_volume}>
             <p className={style.title}>Music volume</p>
             <input
               type="range"
@@ -296,7 +296,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
               value={audio}
               onChange={handleChangeVolumeAudio}
             />
-          </div>
+          </div> */}
           <div className={style.sounds}>
             <p className={`${style.title} mb-2 lg:mb-3`}>Sound</p>
             <div className={style.sounds_list}>
@@ -438,43 +438,57 @@ export default function MixerPanel(props: IMixerPanelProps) {
         </div>
       </div>
       {open && (
-        <div
-          className={style.listMusics}
-          onTouchStart={(e) => e.stopPropagation()}
-          onMouseDown={(e) => e.stopPropagation()}
-        >
-          <ul className={style.listData}>
-            {listMusic.map((music) => (
-              <li
-                key={music.index}
-                ref={music.index == num ? scrollRef : null}
-                className={`flex items-center w-full cursor-pointer text-xs py-1 lg:py-1 ${
-                  num === music.index ? "text-yellow-500" : "text-white"
-                }`}
-                onClick={() => {
-                  dispatch(changeNumMusic(music.index));
-                }}
-              >
-                {num === music.index && (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-3 h-3 text-yellow-500"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                    />
-                  </svg>
-                )}
-                {music.name}
-              </li>
-            ))}
-          </ul>
+        <div className="w-40 mx-2 lg:ml-3 lg:w-60 h-52 lg:h-64 flex flex-col">
+          <div className={style.music_volume}>
+            <p className={style.title}>Music volume</p>
+            <input
+              type="range"
+              min="0"
+              max="1"
+              step="0.1"
+              className={style.music_volume_range}
+              value={audio}
+              onChange={handleChangeVolumeAudio}
+            />
+          </div>
+          <div
+            className={style.listMusics}
+            onTouchStart={(e) => e.stopPropagation()}
+            onMouseDown={(e) => e.stopPropagation()}
+          >
+            <ul className={style.listData}>
+              {listMusic.map((music) => (
+                <li
+                  key={music.index}
+                  ref={music.index == num ? scrollRef : null}
+                  className={`flex items-center w-full cursor-pointer text-xs py-1 lg:py-1 ${
+                    num === music.index ? "text-yellow-500" : "text-white"
+                  }`}
+                  onClick={() => {
+                    dispatch(changeNumMusic(music.index));
+                  }}
+                >
+                  {num === music.index && (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth={1.5}
+                      stroke="currentColor"
+                      className="w-3 h-3 text-yellow-500"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  )}
+                  {music.name}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       )}
     </div>

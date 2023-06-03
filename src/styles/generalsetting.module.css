@@ -1,5 +1,5 @@
 .container {
-  @apply w-52 p-2 lg:p-5 lg:w-80 text-xs lg:text-lg absolute right-[10%] top-[30%] lg:top-[25%] lg:right-[7%] rounded-lg backdrop-blur-[50px] border-2 flex flex-col items-end justify-between text-white font-bold opacity-100;
+  @apply w-52 p-2 lg:p-5 lg:w-80 text-xs lg:text-lg absolute right-[10%] top-[35%] lg:top-[25%] lg:right-[7%] rounded-lg backdrop-blur-[50px] border-2 flex flex-col items-end justify-between text-white font-bold opacity-100;
   transition: opacity 0.5s;
 }
 .hiden {

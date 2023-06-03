@@ -16,6 +16,8 @@ import {
 } from "@/slice/sound.slice";
 import { changeType, changeNumMusic } from "@/slice/music.slice";
 import { Music } from "@/types/music";
+import { Position } from "@/types/position";
+
 export interface IMixerPanelProps {
   state: boolean;
 }
@@ -126,10 +128,84 @@ export default function MixerPanel(props: IMixerPanelProps) {
     }
   };
 
+  //change potition
+  const checkSize = (): boolean => {
+    let size: number = 0;
+    if (typeof window !== "undefined") size = window.innerWidth;
+
+    return size >= 1024 ? true : false;
+  };
+  const [position, setPosition] = React.useState<Position>({
+    x: checkSize() ? 400 : 200,
+    y: checkSize() ? 150 : 50,
+  });
+  const [dragging, setDragging] = React.useState<boolean>(false);
+  const [offset, setOffset] = React.useState<Position>({ x: 0, y: 0 });
+
+  const handleMouseDown = (e: any) => {
+    e.stopPropagation();
+    setDragging(true);
+    setOffset({ x: e.clientX - position.x, y: e.clientY - position.y });
+  };
+  const handleMouseUp = () => {
+    setDragging(false);
+  };
+  const handleMouseMove = (e: any) => {
+    e.stopPropagation();
+    if (dragging) {
+      setPosition({
+        x: e.clientX - offset.x,
+        y: e.clientY - offset.y,
+      });
+    }
+  };
+  const handleTouchStart = (e: any) => {
+    e.stopPropagation();
+    e.preventDefault();
+    setDragging(true);
+    const touch = e.touches[0];
+    setOffset({
+      x: touch.clientX - position.x,
+      y: touch.clientY - position.y,
+    });
+  };
+  const handleTouchEnd = () => {
+    setDragging(false);
+  };
+  const handleTouchMove = (e: any) => {
+    e.stopPropagation();
+    e.preventDefault();
+    if (dragging) {
+      const touch = e.touches[0];
+      setPosition({
+        x: touch.clientX - offset.x,
+        y: touch.clientY - offset.y,
+      });
+    }
+  };
+
   return (
-    <div className={`${style.container} ${!props.state && style.hiden}`}>
+    <div
+      className={`${style.container} ${!props.state && style.hiden}`}
+      style={{
+        position: "absolute",
+        top: position.y,
+        left: position.x,
+        cursor: dragging ? "grabbing" : "grab",
+      }}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseMove={handleMouseMove}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="flex flex-row justify-between items-center">
-        <div className={style.controll}>
+        <div
+          className={style.controll}
+          onTouchStart={(e) => e.stopPropagation()}
+          onMouseDown={(e) => e.stopPropagation()}
+        >
           <div className={style.mood_menu}>
             <div
               className={`${style.mood_menu_item} ${
@@ -352,8 +428,14 @@ export default function MixerPanel(props: IMixerPanelProps) {
         </div>
       </div>
       {open && (
-        <div className={style.listMusics}>
-          <ul className={style.listData}>
+        <div
+          className={style.listMusics}
+          onTouchStart={(e) => e.stopPropagation()}
+        >
+          <ul
+            className={style.listData}
+            onTouchStart={(e) => e.stopPropagation()}
+          >
             {listMusic.map((music) => (
               <li
                 key={music.index}
@@ -364,6 +446,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 onClick={() => {
                   dispatch(changeNumMusic(music.index));
                 }}
+                onTouchStart={(e) => e.stopPropagation()}
               >
                 {num === music.index && (
                   <svg

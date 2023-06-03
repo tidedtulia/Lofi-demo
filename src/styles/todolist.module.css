@@ -1,6 +1,6 @@
 /*-------todos list------*/
 .todosList {
-  @apply p-2 lg:w-64 lg:h-72 w-48 h-52 flex flex-col justify-between items-center opacity-100  rounded-lg backdrop-blur-[50px] border-2  absolute lg:top-[25%] lg:left-[35%] right-[15%] top-[25%];
+  @apply p-2 lg:w-64 lg:h-72 w-48 h-52 flex flex-col justify-between items-center opacity-100  rounded-lg backdrop-blur-[50px] border-2;
   transition: opacity 0.5s;
 }
 .hiden {

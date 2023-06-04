@@ -23,7 +23,7 @@ export default function PomodoroTimerPanel(props: IPomodoroTimerPanelProps) {
     };
     setPosition({
       x: checkSize() ? 50 : 0,
-      y: checkSize() ? 150 : 100,
+      y: checkSize() ? 250 : 100,
     });
   }, []);
   const [position, setPosition] = React.useState<Position>({
@@ -42,7 +42,7 @@ export default function PomodoroTimerPanel(props: IPomodoroTimerPanelProps) {
     setDragging(false);
   };
   const handleMouseMove = (e: any) => {
-    e.stopPropagation();
+    //e.stopPropagation();
     if (dragging) {
       setPosition({
         x: e.clientX - offset.x,
@@ -64,7 +64,7 @@ export default function PomodoroTimerPanel(props: IPomodoroTimerPanelProps) {
     setDragging(false);
   };
   const handleTouchMove = (e: any) => {
-    e.stopPropagation();
+    // e.stopPropagation();
     e.preventDefault();
     if (dragging) {
       const touch = e.touches[0];
@@ -91,13 +91,7 @@ export default function PomodoroTimerPanel(props: IPomodoroTimerPanelProps) {
       onTouchEnd={handleTouchEnd}
     >
       <div className={style.title}>Pomodoro timer</div>
-      <div
-        className="w-full h-full"
-        onTouchStart={(e) => e.stopPropagation()}
-        onMouseDown={(e) => e.stopPropagation()}
-      >
-        {setting ? <Setting /> : <Timer />}
-      </div>
+      {setting ? <Setting /> : <Timer />}
     </div>
   );
 }

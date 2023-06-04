@@ -35,7 +35,7 @@ export default function TodosList({ state }: ITodosListProps) {
     };
     setPosition({
       x: checkSize() ? 1050 : 550,
-      y: checkSize() ? 150 : 100,
+      y: checkSize() ? 250 : 100,
     });
   }, []);
   const [position, setPosition] = React.useState<Position>({

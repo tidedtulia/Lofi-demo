@@ -75,7 +75,11 @@ export default function Timer(props: ITimerProps) {
 
   const audioRef = React.useRef<HTMLAudioElement>(null);
   return (
-    <div className={style.timer_container}>
+    <div
+      className={style.timer_container}
+      onTouchStart={(e) => e.stopPropagation()}
+      onMouseDown={(e) => e.stopPropagation()}
+    >
       <div className="w-3/5">
         <CircularProgressbarWithChildren
           className={style.CircularProgressbar}

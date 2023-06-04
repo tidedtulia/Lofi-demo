@@ -146,7 +146,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
 
       return size >= 1024 ? true : false;
     };
-    setPosition({ x: checkSize() ? 400 : 250, y: checkSize() ? 150 : 75 });
+    setPosition({ x: checkSize() ? 400 : 250, y: checkSize() ? 250 : 75 });
   }, []);
 
   const [dragging, setDragging] = React.useState<boolean>(false);

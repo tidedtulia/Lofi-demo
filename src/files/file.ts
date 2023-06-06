@@ -1,9 +1,9 @@
 //------------const
-export const max = 199;
-export const min = 19;
 export const type1 = 199;
 export const type2 = 19;
 export const type3 = 38;
+export const max = Math.max(type1, type2, type3) + 1;
+export const min = Math.min(type1, type2, type3);
 
 //------------logo
 export const logo =

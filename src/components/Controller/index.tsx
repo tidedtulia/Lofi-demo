@@ -17,6 +17,8 @@ import {
 import ControllerBedRoom from "./ControllerBedRoom";
 import ControllerPlane from "./ControllerPlane";
 
+import { type_scene, location_scene } from "@/files/const";
+
 export interface IControllerProps {}
 
 export default function Controller(props: IControllerProps) {
@@ -48,22 +50,22 @@ export default function Controller(props: IControllerProps) {
       onMouseMove={handleMouseMove}
     >
       <Header />
-      <div className="flex flex-row justify-between items-center">
-        {type == "loficafe" &&
-          (location == "outside" ? (
+      <div className={style.main}>
+        {type == type_scene.loficafe &&
+          (location == location_scene.outside ? (
             <ControllLofiCafeOutSide />
           ) : (
             <ControllLofiCafeInSide />
           ))}
 
-        {type == "bookcafe" &&
-          (location == "outside" ? (
+        {type == type_scene.bookcafe &&
+          (location == location_scene.outside ? (
             <ControllerBookCafeOutSide />
           ) : (
             <ControllerBookCafeInSide />
           ))}
-        {type == "bedroom" && <ControllerBedRoom />}
-        {type == "plane" && <ControllerPlane />}
+        {type == type_scene.bedroom && <ControllerBedRoom />}
+        {type == type_scene.plane && <ControllerPlane />}
 
         <LateralMenu />
       </div>

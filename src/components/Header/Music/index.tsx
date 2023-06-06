@@ -53,19 +53,19 @@ export default function Music(props: IMusicProps) {
   const handleNext = () => {
     if (type == 1) {
       if (num == type1) {
-        dispatch(changeNumMusic(1));
+        dispatch(changeNumMusic(0));
       } else {
         dispatch(changeNumMusic(num + 1));
       }
     } else if (type == 2) {
       if (num == type2) {
-        dispatch(changeNumMusic(1));
+        dispatch(changeNumMusic(0));
       } else {
         dispatch(changeNumMusic(num + 1));
       }
     } else if (type == 3) {
       if (num == type3) {
-        dispatch(changeNumMusic(1));
+        dispatch(changeNumMusic(0));
       } else {
         dispatch(changeNumMusic(num + 1));
       }
@@ -75,19 +75,19 @@ export default function Music(props: IMusicProps) {
 
   const handlePrev = () => {
     if (type == 1) {
-      if (num == 1) {
+      if (num == 0) {
         dispatch(changeNumMusic(type1));
       } else {
         dispatch(changeNumMusic(num - 1));
       }
     } else if (type == 2) {
-      if (num == 1) {
+      if (num == 0) {
         dispatch(changeNumMusic(type2));
       } else {
         dispatch(changeNumMusic(num - 1));
       }
     } else if (type == 3) {
-      if (num == 1) {
+      if (num == 0) {
         dispatch(changeNumMusic(type3));
       } else {
         dispatch(changeNumMusic(num - 1));

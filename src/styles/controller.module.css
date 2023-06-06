@@ -1,3 +1,7 @@
+.main {
+  @apply flex flex-row justify-between items-center;
+}
+
 .container {
   @apply w-full h-[100vh] absolute top-0 left-0 right-0 bottom-0 flex flex-col z-10 opacity-100;
   transition: opacity 0.5s ease-in-out;

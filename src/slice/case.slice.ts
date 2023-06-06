@@ -1,11 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Case } from "@/types/case";
+import {
+  type_scene,
+  location_scene,
+  day_scene,
+  weather_scene,
+} from "@/files/const";
 
 const initialState: Case = {
-  type: "loficafe",
-  location: "outside",
-  day: "day",
-  weather: "stop-rain",
+  type: type_scene.loficafe,
+  location: location_scene.outside,
+  day: day_scene.day,
+  weather: weather_scene.stop_rain,
 };
 const caseSlice = createSlice({
   name: "state",
@@ -13,9 +19,9 @@ const caseSlice = createSlice({
   reducers: {
     changeType: (state, action: PayloadAction<string>) => {
       state.type = action.payload;
-      state.location = "outside";
+      state.location = location_scene.outside;
 
-      state.weather = "stop-rain";
+      state.weather = weather_scene.stop_rain;
     },
     changeLocation: (state, action: PayloadAction<string>) => {
       state.location = action.payload;

@@ -17,7 +17,7 @@ const musicSlice = createSlice({
     },
     changeType: (state, action: PayloadAction<number>) => {
       state.type = action.payload;
-      state.num = Number(Math.floor(Math.random() * min) + 1);
+      state.num = Math.floor(Math.random() * min);
     },
   },
 });

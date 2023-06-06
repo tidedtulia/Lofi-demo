@@ -7,7 +7,7 @@ import { loading_logo, rotate_logo } from "@/files/file";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [isLandscape, setIsLandscape] = useState<boolean>(false);
+  const [isLandscape, setIsLandscape] = useState<boolean>(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {

@@ -1,5 +1,6 @@
 import * as React from "react";
 import Button from "@/components/Button";
+import { weather_scene } from "@/files/const";
 import {
   changeVolumeRain,
   openButtonRain,
@@ -37,11 +38,11 @@ export default function ControllerBookCafeInSide(
   //-----mua
   //chuyen canh+am thanh
   const handleChangeWeather = () => {
-    if (weather == "stop-rain") {
-      dispatch(changeWeather("rain"));
+    if (weather == weather_scene.stop_rain) {
+      dispatch(changeWeather(weather_scene.rain));
       dispatch(openButtonRain());
     } else {
-      dispatch(changeWeather("stop-rain"));
+      dispatch(changeWeather(weather_scene.stop_rain));
       dispatch(closeButtonRain());
     }
   };

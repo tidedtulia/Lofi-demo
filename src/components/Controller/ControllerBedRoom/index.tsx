@@ -1,5 +1,6 @@
 import * as React from "react";
 import Button from "@/components/Button";
+import { weather_scene } from "@/files/const";
 import {
   changeVolumeRain,
   openButtonRain,
@@ -7,11 +8,8 @@ import {
   changeVolumeKeyboard,
   openButtonKeyboard,
   closeButtonKeyboard,
-  changeVolumePeople,
-  openButtonPeople,
-  closeButtonPeople,
 } from "@/slice/sound.slice";
-import { changeLocation, changeWeather } from "@/slice/case.slice";
+import { changeWeather } from "@/slice/case.slice";
 import { useDispatch, useSelector } from "react-redux";
 
 import { RootState } from "@/store";
@@ -29,11 +27,11 @@ export default function ControllerBedRoom(props: IControllerBedRoomProps) {
   //-----mua
   //chuyen canh+am thanh
   const handleChangeWeather = () => {
-    if (weather == "stop-rain") {
-      dispatch(changeWeather("rain"));
+    if (weather == weather_scene.stop_rain) {
+      dispatch(changeWeather(weather_scene.rain));
       dispatch(openButtonRain());
     } else {
-      dispatch(changeWeather("stop-rain"));
+      dispatch(changeWeather(weather_scene.stop_rain));
       dispatch(closeButtonRain());
     }
   };

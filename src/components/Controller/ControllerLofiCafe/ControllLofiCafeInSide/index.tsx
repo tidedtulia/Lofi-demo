@@ -1,6 +1,7 @@
 import * as React from "react";
 import style from "@/styles/controllerinside.module.css";
 import Button from "@/components/Button";
+import { location_scene, weather_scene } from "@/files/const";
 import {
   changeVolumeRain,
   openButtonRain,
@@ -25,7 +26,7 @@ export default function ControllerLofiCafeInSide(
   const weather = useSelector((state: RootState) => state.case.weather);
   const dispatch = useDispatch();
   const hadleOutside = () => {
-    dispatch(changeLocation("outside"));
+    dispatch(changeLocation(location_scene.outside));
   };
 
   const { rain, keyboard, people } = useSelector(
@@ -38,11 +39,11 @@ export default function ControllerLofiCafeInSide(
   //-----mua
   //chuyen canh+am thanh
   const handleChangeWeather = () => {
-    if (weather == "stop-rain") {
-      dispatch(changeWeather("rain"));
+    if (weather == weather_scene.stop_rain) {
+      dispatch(changeWeather(weather_scene.rain));
       dispatch(openButtonRain());
     } else {
-      dispatch(changeWeather("stop-rain"));
+      dispatch(changeWeather(weather_scene.stop_rain));
       dispatch(closeButtonRain());
     }
   };

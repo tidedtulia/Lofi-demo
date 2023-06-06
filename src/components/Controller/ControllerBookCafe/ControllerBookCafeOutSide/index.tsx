@@ -1,6 +1,7 @@
 import * as React from "react";
 import Button from "@/components/Button";
 
+import { weather_scene, location_scene } from "@/files/const";
 import { changeLocation, changeWeather } from "@/slice/case.slice";
 import {
   changeVolumeRain,
@@ -25,14 +26,14 @@ export default function ControllerBookCafeOutSide(
   const dispatch = useDispatch();
 
   const handleInside = () => {
-    dispatch(changeLocation("inside"));
+    dispatch(changeLocation(location_scene.inside));
   };
   const handleChangeWeather = () => {
-    if (weather == "stop-rain") {
-      dispatch(changeWeather("rain"));
+    if (weather == weather_scene.stop_rain) {
+      dispatch(changeWeather(weather_scene.rain));
       dispatch(openButtonRain());
     } else {
-      dispatch(changeWeather("stop-rain"));
+      dispatch(changeWeather(weather_scene.stop_rain));
       dispatch(closeButtonRain());
     }
   };

@@ -1,7 +1,7 @@
 import * as React from "react";
 import style from "@/styles/controlleroutside.module.css";
 import Button from "@/components/Button";
-
+import { location_scene, weather_scene } from "@/files/const";
 import { changeLocation, changeWeather } from "@/slice/case.slice";
 import {
   changeVolumeRain,
@@ -27,14 +27,14 @@ export default function ControllerLofiCafeOutSide(
   const { stateTraffic } = useSelector((state: RootState) => state.sound);
   const dispatch = useDispatch();
   const handleInside = () => {
-    dispatch(changeLocation("inside"));
+    dispatch(changeLocation(location_scene.inside));
   };
   const handleChangeWeather = () => {
-    if (weather == "stop-rain") {
-      dispatch(changeWeather("rain"));
+    if (weather == weather_scene.stop_rain) {
+      dispatch(changeWeather(weather_scene.rain));
       dispatch(openButtonRain());
     } else {
-      dispatch(changeWeather("stop-rain"));
+      dispatch(changeWeather(weather_scene.stop_rain));
       dispatch(closeButtonRain());
     }
   };

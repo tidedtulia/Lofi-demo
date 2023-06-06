@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import Controller from "@/components/Controller";
 import Video from "@/components/Video";
 import { useEffect, useState } from "react";
-import Image from "next/image";
+
 import { loading_logo, rotate_logo } from "@/files/file";
 
 export default function Home() {

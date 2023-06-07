@@ -13,7 +13,7 @@
   @apply text-white text-xs lg:text-sm font-bold text-center;
 }
 .close {
-  @apply absolute top-1 left-1 lg:top-2 lg:left-2 text-white hover:text-yellow-500;
+  @apply absolute top-0 left-0 lg:top-2 lg:left-2 text-white hover:text-yellow-500;
 }
 /* Left - controll */
 .controll {

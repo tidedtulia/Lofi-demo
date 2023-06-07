@@ -11,11 +11,8 @@ export default function LofiCafe(props: ILofiCafeProps) {
   const { location, day, weather } = useSelector(
     (state: RootState) => state.case
   );
-  console.log({ location, day, weather });
 
   const activeVideo = location + "-" + day + "-" + weather;
-
-  console.log(activeVideo);
 
   return (
     <div className="w-full h-[100vh]">

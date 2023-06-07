@@ -9,11 +9,9 @@ export interface IBedRoomProps {}
 
 export default function BedRoom(props: IBedRoomProps) {
   const { day, weather } = useSelector((state: RootState) => state.case);
-  console.log({ day, weather });
 
   const activeVideo = day + "-" + weather;
 
-  console.log(activeVideo);
   return (
     <div className="w-full h-[100vh]">
       <div

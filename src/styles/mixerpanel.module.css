@@ -12,6 +12,9 @@
 .title {
   @apply text-white text-xs lg:text-sm font-bold text-center;
 }
+.close {
+  @apply absolute top-2 right-2 text-white hover:text-yellow-500;
+}
 /* Left - controll */
 .controll {
   @apply w-44 lg:w-56 h-52 lg:h-64 flex flex-col justify-between items-center;

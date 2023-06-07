@@ -8,7 +8,12 @@ import Plane from "./Plane";
 
 export interface IVideoProps {}
 export default function Video(props: IVideoProps) {
-  const { type } = useSelector((state: RootState) => state.case);
+  const { type, location, day, weather } = useSelector(
+    (state: RootState) => state.case
+  );
+
+  console.log({ type, location, day, weather });
+
   return (
     <>
       {type == "loficafe" && <LofiCafe />}

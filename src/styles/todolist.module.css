@@ -9,6 +9,10 @@
   transform: translate(500%, 0);
   /* @apply hidden; */
 }
+.close {
+  @apply absolute top-2 right-2 text-white hover:text-yellow-500;
+}
+
 .todoList_title {
   @apply w-full text-center text-white font-bold;
 }

@@ -29,7 +29,7 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  console.log({ isLandscape });
+  // console.log({ isLandscape });
 
   return (
     <>

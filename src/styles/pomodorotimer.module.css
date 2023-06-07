@@ -11,7 +11,9 @@
 .title {
   @apply text-white font-bold py-1;
 }
-
+.close {
+  @apply absolute top-2 right-2 text-white hover:text-yellow-500;
+}
 /*-------------Button-----------*/
 .button {
   @apply bg-transparent text-[rgba(255,255,255,.8)] cursor-pointer;

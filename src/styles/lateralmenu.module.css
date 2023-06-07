@@ -13,6 +13,18 @@
 .title {
   @apply text-white font-bold bg-[rgba(0,0,0,0.5)] px-2 py-1 rounded-md absolute left-[-70px] opacity-0;
 }
+.title .isOpen {
+  @apply text-yellow-500;
+}
+.isOpen {
+  @apply text-yellow-500;
+}
+.isClose {
+  @apply text-white;
+}
+.title .isClose {
+  @apply text-white;
+}
 .item:hover .title {
   @apply opacity-100;
   transition: opacity 0.5s ease-in-out;

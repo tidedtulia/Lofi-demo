@@ -1,6 +1,6 @@
 /* Container */
 .container {
-  @apply pt-5 pb-2 lg:py-3 pl-2 lg:pl-3 rounded-lg backdrop-blur-[50px] border-2 opacity-100 flex flex-row justify-between items-center;
+  @apply pt-5 pb-2 lg:py-5 pl-2 lg:pl-3 rounded-lg backdrop-blur-[50px] border-2 opacity-100 flex flex-row justify-between items-center;
   transition: opacity 0.5s;
 }
 .hiden {

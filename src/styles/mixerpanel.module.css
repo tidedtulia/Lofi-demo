@@ -1,6 +1,6 @@
 /* Container */
 .container {
-  @apply pt-5 pb-2 lg:py-5 pl-2 lg:pl-3 rounded-lg backdrop-blur-[50px] border-2 opacity-100 flex flex-row justify-between items-center;
+  @apply pt-5 pb-2 pl-2 lg:py-5  lg:pl-5 rounded-lg backdrop-blur-[50px] border-2 opacity-100 flex flex-row justify-between items-center;
   transition: opacity 0.5s;
 }
 .hiden {
@@ -13,7 +13,7 @@
   @apply text-white text-xs lg:text-sm font-bold text-center;
 }
 .close {
-  @apply absolute top-0 left-0 lg:top-2 lg:left-2 text-white hover:text-yellow-500;
+  @apply absolute top-0 left-0 lg:top-1 lg:left-1 text-white hover:text-yellow-500;
 }
 /* Left - controll */
 .controll {

@@ -317,7 +317,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
             />
           </div> */}
           <div className={style.sounds}>
-            <p className={`${style.title} mb-2 lg:mb-3`}>Sound</p>
+            <p className={style.title}>Sound</p>
             <div className={style.sounds_list}>
               <div className={style.sounds_item}>
                 <p className={style.sounds_item_title}>Traffic city</p>
@@ -457,7 +457,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
         </div>
       </div>
       {open && (
-        <div className="w-40 mx-2 lg:ml-3 lg:w-60 h-52 lg:h-64 flex flex-col">
+        <div className="w-40 mx-2 lg:ml-3 lg:w-60 h-52 lg:h-72 flex flex-col">
           <div
             className={style.music_volume}
             onTouchStart={(e) => e.stopPropagation()}

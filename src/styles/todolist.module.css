@@ -10,7 +10,7 @@
   /* @apply hidden; */
 }
 .close {
-  @apply absolute top-2 right-2 text-white hover:text-yellow-500;
+  @apply cursor-pointer absolute top-2 right-2 text-white hover:text-yellow-500;
 }
 
 .todoList_title {

@@ -24,7 +24,7 @@
   @apply bg-[rgba(0,0,0,0.3)];
 }
 .toogle_button {
-  @apply lg:w-8 lg:h-8 w-4 h-4 bg-white rounded-full transition-all duration-500;
+  @apply lg:w-8 lg:h-8 w-4 h-4 bg-white rounded-full transition-all duration-500 cursor-pointer;
 }
 .toogle_button_true {
   @apply ml-4 lg:ml-8;

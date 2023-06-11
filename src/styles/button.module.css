@@ -3,7 +3,7 @@
 }
 
 .circle_hover {
-  @apply h-8 w-8 flex flex-col items-center justify-center border-2 border-white rounded-full;
+  @apply h-8 w-8 flex flex-col items-center justify-center border-2 border-white rounded-full cursor-pointer;
 }
 
 .popover_action:hover .circle_hover {

@@ -2,6 +2,7 @@ import * as React from "react";
 import style from "@/styles/mixerpanel.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
+import { weather_scene } from "@/files/const";
 import {
   changeVolumeAudio,
   changeVolumeRain,
@@ -17,6 +18,7 @@ import {
 import { changeType, changeNumMusic } from "@/slice/music.slice";
 import { Music } from "@/types/music";
 import { Position } from "@/types/position";
+import { changeWeather } from "@/slice/case.slice";
 
 export interface IMixerPanelProps {
   state: boolean;
@@ -75,6 +77,8 @@ export default function MixerPanel(props: IMixerPanelProps) {
   const handleChangeVolumeRain = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeRain(value));
+    if (value > 0) dispatch(changeWeather(weather_scene.rain));
+    else dispatch(changeWeather(weather_scene.stop_rain));
   };
   const handleChangeVolumeTraffic = (
     e: React.ChangeEvent<HTMLInputElement>

@@ -27,15 +27,21 @@ const soundSlice = createSlice({
     },
     changeVolumeRain: (state, action) => {
       state.rain = action.payload;
+      if (action.payload > 0) state.stateRain = true;
+      else state.stateRain = false;
     },
     changeVolumeTraffic: (state, action) => {
       state.traffic = action.payload;
     },
     changeVolumeKeyboard: (state, action) => {
       state.keyboard = action.payload;
+      if (action.payload > 0) state.stateKeyboard = true;
+      else state.stateKeyboard = false;
     },
     changeVolumePeople: (state, action) => {
       state.people = action.payload;
+      if (action.payload > 0) state.statePeople = true;
+      else state.statePeople = false;
     },
     changeVolumeTrain: (state, action) => {
       state.train = action.payload;
@@ -51,6 +57,8 @@ const soundSlice = createSlice({
     },
     changeVolumePlane: (state, action) => {
       state.plane = action.payload;
+      if (action.payload > 0) state.statePlane = true;
+      else state.statePlane = false;
     },
     openButtonRain: (state) => {
       state.rain = 0.5;

@@ -21,7 +21,7 @@ const caseSlice = createSlice({
       state.type = action.payload;
       state.location = location_scene.outside;
 
-      state.weather = weather_scene.stop_rain;
+      // state.weather = weather_scene.stop_rain;
     },
     changeLocation: (state, action: PayloadAction<string>) => {
       state.location = action.payload;

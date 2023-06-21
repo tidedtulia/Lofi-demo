@@ -38,31 +38,33 @@ export default function MixerPanel(props: IMixerPanelProps) {
     campfire,
     plane,
   } = useSelector((state: RootState) => state.sound);
-  const { type, num } = useSelector((state: RootState) => state.music);
+  const { type, num, listMusic } = useSelector(
+    (state: RootState) => state.music
+  );
   const dispatch = useDispatch();
 
-  const [listMusic, setListMusic] = React.useState<Music[]>([
-    { index: 0, name: "123" },
-  ]);
+  // const [listMusic, setListMusic] = React.useState<Music[]>([
+  //   { index: 0, name: "0", src: "0" },
+  // ]);
 
   const [open, setOpen] = React.useState<boolean>(false);
 
   const scrollRef = React.useRef<any>(null);
 
-  React.useEffect(() => {
-    const getListMusic = async () => {
-      const res = await fetch(`/api/getListMusic?id=${type}`);
-      const data = await res.json();
+  // React.useEffect(() => {
+  //   const getListMusic = async () => {
+  //     const res = await fetch(`/api/getListMusic?id=${type}`);
+  //     const data = await res.json();
 
-      if (data.length == 0) {
-        console.log("fetch list music fail");
-        getListMusic();
-      } else {
-        setListMusic(data);
-      }
-    };
-    getListMusic();
-  }, [type]);
+  //     if (data.length == 0) {
+  //       console.log("fetch list music fail");
+  //       getListMusic();
+  //     } else {
+  //       setListMusic(data);
+  //     }
+  //   };
+  //   getListMusic();
+  // }, [type]);
 
   React.useEffect(() => {
     if (num) {
@@ -484,18 +486,18 @@ export default function MixerPanel(props: IMixerPanelProps) {
             onMouseDown={(e) => e.stopPropagation()}
           >
             <ul className={style.listData}>
-              {listMusic.map((music) => (
+              {listMusic.map((music, index) => (
                 <li
                   key={music.index}
-                  ref={music.index == num ? scrollRef : null}
+                  ref={num == index ? scrollRef : null}
                   className={`flex items-center w-full cursor-pointer text-xs py-1 lg:py-1 ${
-                    num === music.index ? "text-yellow-500" : "text-white"
+                    num === index ? "text-yellow-500" : "text-white"
                   }`}
                   onClick={() => {
-                    dispatch(changeNumMusic(music.index));
+                    dispatch(changeNumMusic(index));
                   }}
                 >
-                  {num === music.index && (
+                  {num === index && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"

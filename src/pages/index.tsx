@@ -4,6 +4,9 @@ import Video from "@/components/Video";
 import { useEffect, useState } from "react";
 
 import { loading_logo, rotate_logo } from "@/files/file";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/store";
+import { setListMusic, setSrc } from "@/slice/music.slice";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -13,9 +16,7 @@ export default function Home() {
     const timeout = setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-    return () => clearTimeout(timeout);
-  }, []);
-  useEffect(() => {
+
     const handleResize = () => {
       const { matches } = window.matchMedia("(orientation: landscape)");
       setIsLandscape(matches);
@@ -26,10 +27,38 @@ export default function Home() {
     window.addEventListener("resize", handleResize);
 
     return () => {
+      clearTimeout(timeout);
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // console.log({ isLandscape });
+
+  //get list music
+  const { type, num, listMusic } = useSelector(
+    (state: RootState) => state.music
+  );
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const getListMusic = async () => {
+      const res = await fetch(`/api/getListMusic?id=${type}`);
+      const data = await res.json();
+
+      if (data.length == 0) {
+        console.log("fetch list music fail");
+
+        getListMusic();
+      } else {
+        // setListMusic(data);
+        dispatch(setListMusic(data));
+        dispatch(setSrc(data[num]?.src));
+      }
+    };
+
+    getListMusic();
+  }, [type]);
+
+  console.log({ type, num, name: listMusic[num].name });
 
   return (
     <>

@@ -24,7 +24,7 @@
   @apply w-full h-[28%] py-1 lg:py-3 rounded-lg backdrop-blur-[10px] border-2 flex flex-row justify-between items-center;
 }
 .mood_menu_item {
-  @apply basis-1/3 flex flex-col justify-center items-center;
+  @apply basis-1/3 flex flex-col justify-center items-center cursor-pointer;
 }
 .mood_active {
   @apply text-yellow-300;

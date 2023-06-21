@@ -19,23 +19,23 @@ export default function Music(props: IMusicProps) {
     isPlay: false,
     icon: play,
   });
-  const { type, num } = useSelector((state: RootState) => state.music);
-  const [url, setUrl] = React.useState<string>("");
-  React.useEffect(() => {
-    let result = "";
-    const fetchData = async () => {
-      const res = await fetch(`/api/getOneMusic?id=${type}&index=${num}`);
-      const data = await res.json();
-      result = data;
-      console.log({ music: data, num });
-      setUrl(data);
-    };
-    fetchData();
-    if (result == "error") {
-      console.log("fetch music error");
-      fetchData();
-    }
-  }, [type, num]);
+  const { type, num, src } = useSelector((state: RootState) => state.music);
+  //const [url, setUrl] = React.useState<string>("");
+  // React.useEffect(() => {
+  //   let result = "";
+  //   const fetchData = async () => {
+  //     const res = await fetch(`/api/getOneMusic?id=${type}&index=${num}`);
+  //     const data = await res.json();
+  //     result = data;
+  //     console.log({ music: data, num });
+  //     setUrl(data);
+  //   };
+  //   fetchData();
+  //   if (result == "error") {
+  //     console.log("fetch music error");
+  //     fetchData();
+  //   }
+  // }, [type, num]);
 
   const audioRef = React.useRef<HTMLAudioElement>(null);
 
@@ -196,7 +196,7 @@ export default function Music(props: IMusicProps) {
           onChange={changeVolume}
         />
       </div>
-      <audio autoPlay ref={audioRef} src={url} onEnded={handleNext} />
+      <audio autoPlay ref={audioRef} src={src} onEnded={handleNext} />
     </div>
   );
 }

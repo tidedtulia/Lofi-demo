@@ -58,7 +58,7 @@ export default function Home() {
     getListMusic();
   }, [type]);
 
-  console.log({ type, num, name: listMusic[num].name });
+  console.log({ type, num, name: listMusic[num]?.name });
 
   return (
     <>

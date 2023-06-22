@@ -40,6 +40,9 @@ export default function ControllerBookCafeOutSide(
   const changeVolumeRainButton = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = parseFloat(e.target.value);
     dispatch(changeVolumeRain(v));
+
+    if (v > 0) dispatch(changeWeather(weather_scene.rain));
+    else dispatch(changeWeather(weather_scene.stop_rain));
   };
 
   const handleChangeTraffic = () => {

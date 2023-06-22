@@ -47,10 +47,13 @@ export default function ControllerLofiCafeInSide(
       dispatch(closeButtonRain());
     }
   };
-  //chuyen am lwong
+  //chuyen am luong
   const changeVolumeRainButton = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = parseFloat(e.target.value);
     dispatch(changeVolumeRain(v));
+
+    if (v > 0) dispatch(changeWeather(weather_scene.rain));
+    else dispatch(changeWeather(weather_scene.stop_rain));
   };
 
   //-------ban phim

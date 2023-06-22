@@ -79,6 +79,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
   const handleChangeVolumeRain = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeRain(value));
+
     if (value > 0) dispatch(changeWeather(weather_scene.rain));
     else dispatch(changeWeather(weather_scene.stop_rain));
   };

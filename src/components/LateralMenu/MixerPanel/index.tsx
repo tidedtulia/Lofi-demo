@@ -330,6 +330,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Traffic city</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_traffic"
                   type="range"
                   min="0"
                   max="1"
@@ -342,6 +343,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>City rain</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_city-rain"
                   type="range"
                   min="0"
                   max="1"
@@ -354,6 +356,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>People talking</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_people-talking"
                   type="range"
                   min="0"
                   max="1"
@@ -366,6 +369,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Keyboard</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_keyboard"
                   type="range"
                   min="0"
                   max="1"
@@ -378,6 +382,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Train</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_train"
                   type="range"
                   min="0"
                   max="1"
@@ -390,6 +395,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Thunder</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_thunder"
                   type="range"
                   min="0"
                   max="1"
@@ -402,6 +408,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Forest Night</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_forest-night"
                   type="range"
                   min="0"
                   max="1"
@@ -414,6 +421,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Campfire</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_campfire"
                   type="range"
                   min="0"
                   max="1"
@@ -426,6 +434,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 <p className={style.sounds_item_title}>Plane</p>
                 <input
                   className={style.sounds_item_volume}
+                  id="sound-item_plane"
                   type="range"
                   min="0"
                   max="1"

@@ -23,7 +23,7 @@ export const scene = {
   bookcafe:
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943011/lofi/book-cafe/book_cafe_preview_out.aeae5beef7737b9ae88e_pfaah7.png",
   bedroom:
-    "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943034/lofi/bed-room/Tr%C3%ACnh_ph%C3%A1t_%C4%90a_ph%C6%B0%C6%A1ng_ti%E1%BB%87n_08_04_2023_3_35_51_CH_nxvx5l.png",
+    "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943034/lofi/bed-room/bed-room-scene.png",
   plane:
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1685539303/lofi/plane/plane.b4697a27c4ace88c60dd_ncdi4o.png",
 };

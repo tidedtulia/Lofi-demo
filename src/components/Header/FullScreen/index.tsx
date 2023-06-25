@@ -24,7 +24,7 @@ export default function FullScreen(props: IFullScreenProps) {
   };
 
   return (
-    <button className={style.button} onClick={handleClick}>
+    <button className={style.button} id="button_screen" onClick={handleClick}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

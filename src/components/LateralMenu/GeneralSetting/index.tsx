@@ -47,6 +47,7 @@ export default function GeneralSetting(props: IGeneralSettingProps) {
             value={time}
             onChange={handleChangeTime}
             className={style.hire_after_input}
+            id="hire-after-input"
           />
           <p>sec</p>
         </div>

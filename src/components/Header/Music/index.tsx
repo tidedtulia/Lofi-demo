@@ -118,7 +118,7 @@ export default function Music(props: IMusicProps) {
   return (
     <div className={style.container}>
       <div className={style.control}>
-        <button className={style.button} onClick={handlePrev}>
+        <button className={style.button} id="button_back" onClick={handlePrev}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -134,7 +134,7 @@ export default function Music(props: IMusicProps) {
             />
           </svg>
         </button>
-        <button className={style.button} onClick={handlePlay}>
+        <button className={style.button} id="button_play" onClick={handlePlay}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -150,7 +150,11 @@ export default function Music(props: IMusicProps) {
             />
           </svg>
         </button>
-        <button className={style.button} onClick={handleNext}>
+        <button
+          className={style.button}
+          id="button_forward"
+          onClick={handleNext}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -166,7 +170,11 @@ export default function Music(props: IMusicProps) {
             />
           </svg>
         </button>
-        <button className={style.button} onClick={handleOpenVolume}>
+        <button
+          className={style.button}
+          id="button_volumn"
+          onClick={handleOpenVolume}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

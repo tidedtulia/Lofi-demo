@@ -5,13 +5,23 @@ import Clock from "./Clock";
 import FullScreen from "./FullScreen";
 import Music from "./Music";
 import Toggle from "./Toggle";
+import { CldImage } from "next-cloudinary";
 
 export interface IHeaderProps {}
 
 export default function Header(props: IHeaderProps) {
   return (
     <div className={style.container}>
-      <img src={logo} alt="" className={style.logo} />
+      {/* <img src={logo} alt="" className={style.logo} />
+       */}
+      <CldImage
+        src={logo}
+        alt="logo-header"
+        className={style.logo}
+        width="0"
+        height="0"
+        sizes="100vw"
+      />
       <div className={style.control}>
         <Clock />
         <Toggle />

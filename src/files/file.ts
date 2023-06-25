@@ -6,10 +6,9 @@ export const max = Math.max(type1, type2, type3) + 1;
 export const min = Math.min(type1, type2, type3);
 
 //------------logo
-export const logo =
-  "https://res.cloudinary.com/dp7dspftn/image/upload/v1680602044/lofi/logo.0cbf9e63b4a021661126_rttu7d.gif";
+
 export const logo_header =
-  "https://res.cloudinary.com/dp7dspftn/image/upload/v1680602051/lofi/tdtnh8321_On_a_tree_branch_sat_a_samurai_leaning_against_a_tree_3b89cb31-42b7-4bf5-a68a-0cf5e1a38345_uce217.png";
+  "https://res.cloudinary.com/dp7dspftn/image/upload/v1687671216/lofi/logo-header_oxnn92.jpg";
 
 export const loading_logo =
   "https://res.cloudinary.com/dp7dspftn/image/upload/v1680602044/lofi/logo.0cbf9e63b4a021661126_rttu7d.gif";

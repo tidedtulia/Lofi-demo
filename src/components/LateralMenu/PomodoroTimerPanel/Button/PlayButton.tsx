@@ -6,7 +6,7 @@ export interface IPlayButtonProps {
 
 export default function PlayButton(props: IPlayButtonProps) {
   return (
-    <button {...props} className={style.button}>
+    <button {...props} className={style.button} title="Play" aria-label="Play">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

@@ -11,6 +11,8 @@ export default function SettingButton(props: ISettingButtonProps) {
       {...props}
       className={`${style.button} ${style.with_text}`}
       onClick={() => dispatch(changeSetting(true))}
+      title="Setting"
+      aria-label="Setting"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

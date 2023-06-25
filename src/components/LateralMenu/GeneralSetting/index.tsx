@@ -40,7 +40,9 @@ export default function GeneralSetting(props: IGeneralSettingProps) {
         inactivity.
       </p>
       <div className={style.hire_after}>
-        <p className={style.hire_after_title}>Hide after</p>
+        <label htmlFor="hire-after-input" className={style.hire_after_title}>
+          Hide after
+        </label>
         <div className={style.hire_after_number}>
           <input
             type="number"

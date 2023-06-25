@@ -1,6 +1,6 @@
 import * as React from "react";
 import style from "@/styles/header.module.css";
-import { logo } from "@/files/file";
+import { loading_logo } from "@/files/file";
 import Clock from "./Clock";
 import FullScreen from "./FullScreen";
 import Music from "./Music";
@@ -15,7 +15,7 @@ export default function Header(props: IHeaderProps) {
       {/* <img src={logo} alt="" className={style.logo} />
        */}
       <CldImage
-        src={logo}
+        src={loading_logo}
         alt="logo-header"
         className={style.logo}
         width="0"

@@ -11,6 +11,10 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="description" content="Một nơi tuyệt vời để thư giãn" />
+        <meta name="keywords" content="lofi, tide.tulia, lofi-chill" />
+        <meta name="author" content="Tide D. Tulia" />
         <title>Lofi - Chìll</title>
         <link rel="icon" href={logo_header} />
       </Head>
@@ -20,3 +24,4 @@ export default function App({ Component, pageProps }: AppProps) {
     </Provider>
   );
 }
+

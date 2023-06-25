@@ -20,8 +20,11 @@ export default async function getListMusic(
   try {
     const { resources } = await cloudinary.v2.api.resources({
       type: "upload",
-      prefix: folder,
       resource_type: "video",
+      quality: "auto:low",
+      flags: "lossy",
+      format: "mp3",
+      prefix: folder,
       max_results: max,
     });
 
@@ -32,6 +35,7 @@ export default async function getListMusic(
         let nameArray: string[] = nameResult.split("_");
         let name = "";
         let src = rs["secure_url"];
+
         for (let i = 0; i < nameArray.length - 1; i++) {
           name += nameArray[i] + " ";
         }
@@ -40,7 +44,7 @@ export default async function getListMusic(
         listMusics.push({ index, name, src });
       });
       listMusics = shuffleArray(listMusics);
-      return res.json(listMusics);
+      return res.status(200).json(listMusics);
     } else {
       return res.status(404).json("error");
     }

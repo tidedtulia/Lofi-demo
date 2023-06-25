@@ -6,7 +6,12 @@ export interface IPauseButtonProps {
 
 export default function PauseButton(props: IPauseButtonProps) {
   return (
-    <button {...props} className={style.button}>
+    <button
+      {...props}
+      className={style.button}
+      title="Pause"
+      aria-label="Pause"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

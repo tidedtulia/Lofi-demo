@@ -327,7 +327,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
             <p className={style.title}>Sound</p>
             <div className={style.sounds_list}>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Traffic city</p>
+                <label
+                  htmlFor="sound-item_traffic"
+                  className={style.sounds_item_title}
+                >
+                  Traffic city
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_traffic"
@@ -340,7 +345,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>City rain</p>
+                <label
+                  htmlFor="sound-item_city-rain"
+                  className={style.sounds_item_title}
+                >
+                  City rain
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_city-rain"
@@ -353,7 +363,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>People talking</p>
+                <label
+                  htmlFor="sound-item_people-talking"
+                  className={style.sounds_item_title}
+                >
+                  People talking
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_people-talking"
@@ -366,7 +381,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Keyboard</p>
+                <label
+                  htmlFor="sound-item_keyboard"
+                  className={style.sounds_item_title}
+                >
+                  Keyboard
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_keyboard"
@@ -379,7 +399,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Train</p>
+                <label
+                  htmlFor="sound-item_train"
+                  className={style.sounds_item_title}
+                >
+                  Train
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_train"
@@ -392,7 +417,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Thunder</p>
+                <label
+                  htmlFor="sound-item_thunder"
+                  className={style.sounds_item_title}
+                >
+                  Thunder
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_thunder"
@@ -405,7 +435,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Forest Night</p>
+                <label
+                  htmlFor="sound-item_forest-night"
+                  className={style.sounds_item_title}
+                >
+                  Forest Night
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_forest-night"
@@ -418,7 +453,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Campfire</p>
+                <label
+                  htmlFor="sound-item_campfire"
+                  className={style.sounds_item_title}
+                >
+                  Campfire
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_campfire"
@@ -431,7 +471,12 @@ export default function MixerPanel(props: IMixerPanelProps) {
                 />
               </div>
               <div className={style.sounds_item}>
-                <p className={style.sounds_item_title}>Plane</p>
+                <label
+                  htmlFor="sound-item_plane"
+                  className={style.sounds_item_title}
+                >
+                  Plane
+                </label>
                 <input
                   className={style.sounds_item_volume}
                   id="sound-item_plane"

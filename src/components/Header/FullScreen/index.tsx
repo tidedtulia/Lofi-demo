@@ -24,7 +24,13 @@ export default function FullScreen(props: IFullScreenProps) {
   };
 
   return (
-    <button className={style.button} id="button_screen" onClick={handleClick}>
+    <button
+      className={style.button}
+      id="button_screen"
+      onClick={handleClick}
+      title="Fullscreen"
+      aria-label="Fullscreen"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

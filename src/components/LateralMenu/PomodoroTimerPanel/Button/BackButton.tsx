@@ -11,6 +11,8 @@ export default function BackButton(props: IBackButtonProps) {
       {...props}
       className={`${style.button} ${style.with_text} ${"mt-5"}`}
       onClick={() => dispatch(changeSetting(false))}
+      title="Back"
+      aria-label="Back"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import Controller from "@/components/Controller";
 import Video from "@/components/Video";
 import { useEffect, useState } from "react";
-
+import { CldImage } from "next-cloudinary";
 import { loading_logo, rotate_logo } from "@/files/file";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/store";
@@ -64,10 +64,12 @@ export default function Home() {
     <>
       {!isLandscape && (
         <div className={styles.landscape} id="landscape">
-          <img
-            width={120}
+          <CldImage
             src={rotate_logo}
             alt="Please rotate your device horizontally"
+            width="0"
+            height="0"
+            sizes="100vw"
           />
           <h1 className="text-[#ddd]">
             Please rotate your device horizontally
@@ -76,7 +78,13 @@ export default function Home() {
       )}
       {isLoading && (
         <div className="fixed inset-0 z-[1000] flex flex-col justify-center items-center bg-[#333]">
-          <img width={120} src={loading_logo} alt="Loading..." />
+          <CldImage
+            src={loading_logo}
+            alt="Loading..."
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
           <h1 className="text-[#ddd]">Loading.....</h1>
         </div>
       )}

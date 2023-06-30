@@ -121,30 +121,42 @@ export const video = {
   },
   lakehouse: {
     outside_day_stoprain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/Outside_Day.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044143/lofi/lake-house/Outside_Day_zs4hus.mp4",
     outside_day_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/Outside_Day_Rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044145/lofi/lake-house/Outside_Day_Rain_rnvotq.mp4",
     outside_night_stoprain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/outside_night.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044142/lofi/lake-house/outside_night_irlvja.mp4",
     outside_night_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/outside_night_rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044138/lofi/lake-house/outside_night_rain_xhuiqi.mp4",
     inside_day_stoprain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/Inside_Day.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044136/lofi/lake-house/Inside_Day_cngao1.mp4",
     inside_day_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/Inside_Day_Rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044139/lofi/lake-house/Inside_Day_Rain_okneac.mp4",
     inside_night_stoprain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/Inside_Night.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044136/lofi/lake-house/Inside_Night_mstdkf.mp4",
     inside_night_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/lake-house/Inside_Night_Rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044135/lofi/lake-house/Inside_Night_Rain_xuttbc.mp4",
   },
   inthewoods: {
     inside_stoprain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/inthewoods/inside_sun.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044288/lofi/in-the-woods/inside_sun_kfm409.mp4",
     inside_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/inthewoods/inside_rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/inside_rain_oipl6r.mp4",
     outside_stoprain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/inthewoods/outside_sun.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/outside_sun_xnrgj0.mp4",
     outside_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/inthewoods/outside_rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/outside_rain_sumitk.mp4",
   },
 };

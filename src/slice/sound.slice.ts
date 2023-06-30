@@ -14,9 +14,12 @@ const initialState = {
   train: 0,
   thunder: 0,
   forest_night: 0,
+  stateForest_Night: false,
   campfire: 0,
   plane: 0,
   statePlane: false,
+  bird: 0,
+  stateBird: false,
 };
 const soundSlice = createSlice({
   name: "sound",
@@ -51,6 +54,8 @@ const soundSlice = createSlice({
     },
     changeVolumeForestNight: (state, action) => {
       state.forest_night = action.payload;
+      if (action.payload > 0) state.stateForest_Night = true;
+      else state.stateForest_Night = false;
     },
     changeVolumeCampfire: (state, action) => {
       state.campfire = action.payload;
@@ -59,6 +64,11 @@ const soundSlice = createSlice({
       state.plane = action.payload;
       if (action.payload > 0) state.statePlane = true;
       else state.statePlane = false;
+    },
+    changeVolumeBird: (state, action) => {
+      state.bird = action.payload;
+      if (action.payload > 0) state.stateBird = true;
+      else state.stateBird = false;
     },
     openButtonRain: (state) => {
       state.rain = 0.5;
@@ -92,6 +102,14 @@ const soundSlice = createSlice({
       state.people = 0;
       state.statePeople = false;
     },
+    openButtonForestNight: (state) => {
+      state.forest_night = 0.5;
+      state.stateForest_Night = true;
+    },
+    closeButtonForestNight: (state) => {
+      state.forest_night = 0;
+      state.stateForest_Night = false;
+    },
     openButtonPlane: (state) => {
       state.plane = 0.5;
       state.statePlane = true;
@@ -99,6 +117,14 @@ const soundSlice = createSlice({
     closeButtonPlane: (state) => {
       state.plane = 0;
       state.statePlane = false;
+    },
+    openButtonBird: (state) => {
+      state.bird = 0.5;
+      state.stateBird = true;
+    },
+    closeButtonBird: (state) => {
+      state.bird = 0;
+      state.stateBird = false;
     },
   },
 });
@@ -114,6 +140,7 @@ export const {
   changeVolumeForestNight,
   changeVolumeCampfire,
   changeVolumePlane,
+  changeVolumeBird,
 
   openButtonRain,
   closeButtonRain,
@@ -127,7 +154,13 @@ export const {
   openButtonPeople,
   closeButtonPeople,
 
+  openButtonForestNight,
+  closeButtonForestNight,
+
   openButtonPlane,
   closeButtonPlane,
+
+  openButtonBird,
+  closeButtonBird,
 } = actions;
 export default reducer;

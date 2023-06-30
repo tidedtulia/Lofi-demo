@@ -93,6 +93,41 @@ export default function ScenesPanel(props: IScenesPanelProps) {
           />
         </div>
       )}
+
+      {type != type_scene.lakehouse && (
+        <div
+          className={style.item}
+          onClick={() => handleChangeType(type_scene.lakehouse)}
+        >
+          <p className={style.title}>Lake House</p>
+          {/* <img className={style.img} src={scene.plane} alt="Plane" /> */}
+          <CldImage
+            className={style.img}
+            src={scene.lakehouse}
+            alt="Plane"
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </div>
+      )}
+      {type != type_scene.inthewoods && (
+        <div
+          className={style.item}
+          onClick={() => handleChangeType(type_scene.inthewoods)}
+        >
+          <p className={style.title}>In The Woods</p>
+          {/* <img className={style.img} src={scene.plane} alt="Plane" /> */}
+          <CldImage
+            className={style.img}
+            src={scene.inthewoods}
+            alt="Plane"
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </div>
+      )}
     </div>
   );
 }

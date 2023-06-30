@@ -14,6 +14,7 @@ import {
   changeVolumeForestNight,
   changeVolumeCampfire,
   changeVolumePlane,
+  changeVolumeBird,
 } from "@/slice/sound.slice";
 import { changeType, changeNumMusic } from "@/slice/music.slice";
 import { Music } from "@/types/music";
@@ -37,6 +38,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
     forest_night,
     campfire,
     plane,
+    bird,
   } = useSelector((state: RootState) => state.sound);
   const { type, num, listMusic } = useSelector(
     (state: RootState) => state.music
@@ -76,6 +78,7 @@ export default function MixerPanel(props: IMixerPanelProps) {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeAudio(value));
   };
+
   const handleChangeVolumeRain = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeRain(value));
@@ -83,16 +86,19 @@ export default function MixerPanel(props: IMixerPanelProps) {
     if (value > 0) dispatch(changeWeather(weather_scene.rain));
     else dispatch(changeWeather(weather_scene.stop_rain));
   };
+
   const handleChangeVolumeTraffic = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeTraffic(value));
   };
+
   const handleChangeVolumePeople = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumePeople(value));
   };
+
   const handleChangeVolumeKeyboard = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -104,12 +110,14 @@ export default function MixerPanel(props: IMixerPanelProps) {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeTrain(value));
   };
+
   const handleChangeVolumeThunder = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumeThunder(value));
   };
+
   const handleChangeVolumeForestNight = (
     e: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -127,6 +135,11 @@ export default function MixerPanel(props: IMixerPanelProps) {
   const handleChangeVolumePlane = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = parseFloat(e.target.value);
     dispatch(changeVolumePlane(value));
+  };
+
+  const handleChangeVolumeBird = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = parseFloat(e.target.value);
+    dispatch(changeVolumeBird(value));
   };
 
   const handleChangeType = (t: number) => {
@@ -486,6 +499,24 @@ export default function MixerPanel(props: IMixerPanelProps) {
                   step="0.1"
                   value={plane}
                   onChange={handleChangeVolumePlane}
+                />
+              </div>
+              <div className={style.sounds_item}>
+                <label
+                  htmlFor="sound-item_bird"
+                  className={style.sounds_item_title}
+                >
+                  Bird chirping
+                </label>
+                <input
+                  className={style.sounds_item_volume}
+                  id="sound-item_bird"
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.1"
+                  value={bird}
+                  onChange={handleChangeVolumeBird}
                 />
               </div>
             </div>

@@ -18,6 +18,7 @@ export default function Sound(props: ISoundProps) {
     forest_night,
     campfire,
     plane,
+    bird,
   } = useSelector((state: RootState) => state.sound);
   return (
     <div>
@@ -33,6 +34,7 @@ export default function Sound(props: ISoundProps) {
       )}
       {campfire != 0 && <SoundItem src={sound.campfire} volume={campfire} />}
       {plane != 0 && <SoundItem src={sound.plane} volume={plane} />}
+      {bird != 0 && <SoundItem src={sound.bird} volume={bird} />}
     </div>
   );
 }

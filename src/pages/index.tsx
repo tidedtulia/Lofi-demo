@@ -40,6 +40,13 @@ export default function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // const getTotalFile = async () => {
+    //   const res = await fetch("/api/getTotalFileOfFolder?");
+    //   let data = await res.json();
+    //   console.log({ data });
+    // };
+    // getTotalFile();
+
     const getListMusic = async () => {
       const res = await fetch(`/api/getListMusic?id=${type}`);
       const data = await res.json();

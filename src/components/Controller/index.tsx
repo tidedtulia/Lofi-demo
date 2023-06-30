@@ -16,6 +16,10 @@ import {
 } from "./ControllerBookCafe";
 import ControllerBedRoom from "./ControllerBedRoom";
 import ControllerPlane from "./ControllerPlane";
+import ControllerLakeHouseOutSide from "./ControllerLakeHouse/OutSide/index";
+import ControllerLakeHouseInSide from "./ControllerLakeHouse/InSide";
+import ControllerIntheWoodsOutSide from "./ControllerInTheWoods/OutSide";
+import ControllerIntheWoodsInSide from "./ControllerInTheWoods/InSide";
 
 import { type_scene, location_scene } from "@/files/const";
 
@@ -66,6 +70,18 @@ export default function Controller(props: IControllerProps) {
           ))}
         {type == type_scene.bedroom && <ControllerBedRoom />}
         {type == type_scene.plane && <ControllerPlane />}
+        {type == type_scene.lakehouse &&
+          (location == location_scene.outside ? (
+            <ControllerLakeHouseOutSide />
+          ) : (
+            <ControllerLakeHouseInSide />
+          ))}
+        {type == type_scene.inthewoods &&
+          (location == location_scene.outside ? (
+            <ControllerIntheWoodsOutSide />
+          ) : (
+            <ControllerIntheWoodsInSide />
+          ))}
 
         <LateralMenu />
       </div>

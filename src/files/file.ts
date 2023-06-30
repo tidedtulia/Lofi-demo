@@ -25,6 +25,10 @@ export const scene = {
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1680943034/lofi/bed-room/bed-room-scene.png",
   plane:
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1685539303/lofi/plane/plane.b4697a27c4ace88c60dd_ncdi4o.png",
+  lakehouse:
+    "https://res.cloudinary.com/dp7dspftn/image/upload/v1688044139/lofi/lake-house/lakehouse.png",
+  inthewoods:
+    "https://res.cloudinary.com/dp7dspftn/image/upload/v1688044288/lofi/in-the-woods/inthewoods.png",
 };
 
 //--------sound
@@ -56,62 +60,8 @@ export const sound = {
   plane:
     "https://lofico.nyc3.cdn.digitaloceanspaces.com/effects/airplane.mp3" ||
     "https://res.cloudinary.com/dp7dspftn/video/upload/v1685536880/lofi/sounds/airplane_mhbhhm.mp3",
+  bird: "https://res.cloudinary.com/dp7dspftn/video/upload/v1688132402/lofi/sounds/birds_fmntjs.mp3",
 };
-
-//----Lofi Cafe
-export const outside_day_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602885/lofi/lofi-cafe/outside_wawxxg.mp4";
-export const outside_day_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602888/lofi/lofi-cafe/outside-rain_qa7nxa.mp4";
-export const outside_night_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602885/lofi/lofi-cafe/outside-night_kfb4nn.mp4";
-export const outside_night_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602889/lofi/lofi-cafe/outside-night-rain_tl4qkz.mp4";
-
-export const inside_day_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602886/lofi/lofi-cafe/inside_b3a5ti.mp4";
-export const inside_day_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602889/lofi/lofi-cafe/inside-rain_zkd07g.mp4";
-export const inside_night_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602886/lofi/lofi-cafe/inside-night_x9ejvr.mp4";
-export const inside_night_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680602889/lofi/lofi-cafe/inside-night-rain_jdfgw5.mp4";
-
-// ----------Book Cafe
-export const bookcafe_outside_day_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940925/lofi/book-cafe/ExteriorDay_bhjrat.mp4";
-export const bookcafe_outside_day_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940949/lofi/book-cafe/ExteriorRainyDay_frhrss.mp4";
-export const bookcafe_outside_night_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940924/lofi/book-cafe/ExteriorNight_r07dai.mp4";
-export const bookcafe_outside_night_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940949/lofi/book-cafe/ExteriorRainyNight_rpfyig.mp4";
-export const bookcafe_inside_day_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940924/lofi/book-cafe/CafeDay_vfaqbe.mp4";
-export const bookcafe_inside_day_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940928/lofi/book-cafe/CafeRainyDay_sint4p.mp4";
-export const bookcafe_inside_night_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940924/lofi/book-cafe/CafeNight_vrepzb.mp4";
-export const bookcafe_inside_night_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940926/lofi/book-cafe/CafeRainyNight_jefe5m.mp4";
-
-// ----------Bed room
-export const bedroom_day_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940982/lofi/bed-room/Day-sunny_mafjyt.mp4";
-export const bedroom_day_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940984/lofi/bed-room/Day-rainny_tbw2t7.mp4";
-export const bedroom_night_stoprain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940981/lofi/bed-room/Night-clear_wxdzgx.mp4";
-export const bedroom_night_rain =
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1680940983/lofi/bed-room/Night-rainny_p0kx9g.mp4";
-
-//-----------Plane
-export const plane_day: string =
-  "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/plane/plane-day.mp4" ||
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1685536253/lofi/plane/plane-day_mskkhn.mp4";
-export const plane_night: string =
-  "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/plane/plane-night.mp4" ||
-  "https://res.cloudinary.com/dp7dspftn/video/upload/v1685536258/lofi/plane/plane-night_mljdzn.mp4";
 
 //-------Video
 export const video = {
@@ -168,5 +118,33 @@ export const video = {
     night:
       "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/plane/plane-night.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1685536258/lofi/plane/plane-night_mljdzn.mp4",
+  },
+  lakehouse: {
+    outside_day_stoprain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044143/lofi/lake-house/Outside_Day_zs4hus.mp4",
+    outside_day_rain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044145/lofi/lake-house/Outside_Day_Rain_rnvotq.mp4",
+    outside_night_stoprain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044142/lofi/lake-house/outside_night_irlvja.mp4",
+    outside_night_rain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044138/lofi/lake-house/outside_night_rain_xhuiqi.mp4",
+    inside_day_stoprain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044136/lofi/lake-house/Inside_Day_cngao1.mp4",
+    inside_day_rain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044139/lofi/lake-house/Inside_Day_Rain_okneac.mp4",
+    inside_night_stoprain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044136/lofi/lake-house/Inside_Night_mstdkf.mp4",
+    inside_night_rain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044135/lofi/lake-house/Inside_Night_Rain_xuttbc.mp4",
+  },
+  inthewoods: {
+    inside_stoprain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044288/lofi/in-the-woods/inside_sun_kfm409.mp4",
+    inside_rain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/inside_rain_oipl6r.mp4",
+    outside_stoprain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/outside_sun_xnrgj0.mp4",
+    outside_rain:
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/outside_rain_sumitk.mp4",
   },
 };

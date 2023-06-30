@@ -11,6 +11,8 @@ export const type_scene = {
   bookcafe: "bookcafe",
   bedroom: "bedroom",
   plane: "plane",
+  lakehouse: "lakehouse",
+  inthewoods: "inthewoods",
 };
 
 export const location_scene = {

@@ -12,7 +12,7 @@ export default function TodoItem({ item, deleteTodo }: ITodoItemProps) {
     <div className={style.todoItem}>
       <input
         type="checkbox"
-        className="lg:w-5 lg:h-5 w-4 h-4"
+        className="lg:w-4 lg:h-4 w-2 h-2"
         checked={isCheck}
         onChange={() => setIsCheck(!isCheck)}
       />

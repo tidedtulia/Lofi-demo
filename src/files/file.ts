@@ -1,7 +1,7 @@
-//------------const
-export const type1 = 199;
-export const type2 = 19;
-export const type3 = 38;
+//------------const -1
+export const type1 = 200;
+export const type2 = 22;
+export const type3 = 39;
 export const max = Math.max(type1, type2, type3) + 1;
 export const min = Math.min(type1, type2, type3);
 

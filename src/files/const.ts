@@ -13,6 +13,8 @@ export const type_scene = {
   plane: "plane",
   lakehouse: "lakehouse",
   inthewoods: "inthewoods",
+  seoul: "seoul",
+  am_id_ream: "am_i_dream",
 };
 
 export const location_scene = {
@@ -26,4 +28,15 @@ export const day_scene = {
 export const weather_scene = {
   stop_rain: "stop-rain",
   rain: "rain",
+};
+
+export const result_scene = {
+  outside_day_stop_rain: "outside-day-stop-rain",
+  outside_day_rain: "outside-day-rain",
+  outside_night_rain: "outside-night-rain",
+  outside_night_stop_rain: "outside-night-stop-rain",
+  inside_day_stop_rain: "inside-day-stop-rain",
+  inside_day_rain: "inside-day-rain",
+  inside_night_stop_rain: "inside-night-stop-rain",
+  inside_night_rain: "inside-night-rain",
 };

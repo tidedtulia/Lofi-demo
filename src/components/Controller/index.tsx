@@ -22,6 +22,7 @@ import ControllerIntheWoodsOutSide from "./ControllerInTheWoods/OutSide";
 import ControllerIntheWoodsInSide from "./ControllerInTheWoods/InSide";
 
 import { type_scene, location_scene } from "@/files/const";
+import { SeoulInSide, SeoulOutSide } from "./Seoul";
 
 export interface IControllerProps {}
 
@@ -44,7 +45,61 @@ export default function Controller(props: IControllerProps) {
     return () => {
       clearTimeout(timeoutId);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMouseMoving]);
+
+  const renderController = (): JSX.Element => {
+    switch (type) {
+      case type_scene.loficafe: {
+        return location == location_scene.outside ? (
+          <ControllLofiCafeOutSide />
+        ) : (
+          <ControllLofiCafeInSide />
+        );
+      }
+
+      case type_scene.bookcafe: {
+        return location == location_scene.outside ? (
+          <ControllerBookCafeOutSide />
+        ) : (
+          <ControllerBookCafeInSide />
+        );
+      }
+
+      case type_scene.bedroom: {
+        return <ControllerBedRoom />;
+      }
+
+      case type_scene.plane: {
+        return <ControllerPlane />;
+      }
+
+      case type_scene.lakehouse: {
+        return location == location_scene.outside ? (
+          <ControllerLakeHouseOutSide />
+        ) : (
+          <ControllerLakeHouseInSide />
+        );
+      }
+      case type_scene.inthewoods: {
+        return location == location_scene.outside ? (
+          <ControllerIntheWoodsOutSide />
+        ) : (
+          <ControllerIntheWoodsInSide />
+        );
+      }
+      case type_scene.seoul: {
+        return location == location_scene.outside ? (
+          <SeoulOutSide />
+        ) : (
+          <SeoulInSide />
+        );
+      }
+
+      default:
+        return <ControllLofiCafeOutSide />;
+    }
+  };
 
   return (
     <div
@@ -55,7 +110,7 @@ export default function Controller(props: IControllerProps) {
     >
       <Header />
       <div className={style.main}>
-        {type == type_scene.loficafe &&
+        {/* {type == type_scene.loficafe &&
           (location == location_scene.outside ? (
             <ControllLofiCafeOutSide />
           ) : (
@@ -81,7 +136,9 @@ export default function Controller(props: IControllerProps) {
             <ControllerIntheWoodsOutSide />
           ) : (
             <ControllerIntheWoodsInSide />
-          ))}
+          ))} */}
+
+        {renderController()}
 
         <LateralMenu />
       </div>

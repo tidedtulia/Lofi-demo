@@ -8,6 +8,7 @@ import Plane from "./Plane";
 import LakeHouse from "./LakeHouse";
 import InTheWoods from "./InTheWoods";
 import { type_scene } from "@/files/const";
+import Seoul from "./Seoul";
 
 export interface IVideoProps {}
 export default function Video(props: IVideoProps) {
@@ -25,6 +26,7 @@ export default function Video(props: IVideoProps) {
       {type == type_scene.plane && <Plane />}
       {type == type_scene.lakehouse && <LakeHouse />}
       {type == type_scene.inthewoods && <InTheWoods />}
+      {type == type_scene.seoul && <Seoul />}
     </>
   );
 }

@@ -29,6 +29,8 @@ export const scene = {
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1688044139/lofi/lake-house/lakehouse.png",
   inthewoods:
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1688044288/lofi/in-the-woods/inthewoods.png",
+  seoul:
+    "https://res.cloudinary.com/dp7dspftn/image/upload/v1704521202/lofi/seoul/seoul-outside.176c7ba739a57d5ce1b8_s9ggks.png",
 };
 
 //--------sound
@@ -158,5 +160,31 @@ export const video = {
     outside_rain:
       "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/inthewoods/outside_rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1688044289/lofi/in-the-woods/outside_rain_sumitk.mp4",
+  },
+  seoul: {
+    outside_day_stop_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/outside-day.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517443/lofi/seoul/outside-day_oqz64p.mp4",
+    outside_day_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/outside-day-rain.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517445/lofi/seoul/outside-day-rain_ikzkzj.mp4",
+    outside_night_stop_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/outside-night.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517434/lofi/seoul/outside-night_chepef.mp4",
+    outside_night_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/outside-night-rain.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517441/lofi/seoul/outside-night-rain_caqt4r.mp4",
+    inside_day_stop_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/inside-day.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517426/lofi/seoul/inside-day_kgdljb.mp4",
+    inside_day_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/inside-day-rain.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517436/lofi/seoul/inside-day-rain_kbuzf3.mp4",
+    inside_night_stop_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/inside-night.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517440/lofi/seoul/inside-night_knyazq.mp4",
+    inside_night_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/inside-night-rain.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517446/lofi/seoul/inside-night-rain_jnkycr.mp4",
   },
 };

@@ -128,6 +128,23 @@ export default function ScenesPanel(props: IScenesPanelProps) {
           />
         </div>
       )}
+      {type != type_scene.seoul && (
+        <div
+          className={style.item}
+          onClick={() => handleChangeType(type_scene.seoul)}
+        >
+          <p className={style.title}>Seoul</p>
+          {/* <img className={style.img} src={scene.plane} alt="Plane" /> */}
+          <CldImage
+            className={style.img}
+            src={scene.seoul}
+            alt="Plane"
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </div>
+      )}
     </div>
   );
 }

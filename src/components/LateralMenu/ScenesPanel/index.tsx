@@ -145,6 +145,23 @@ export default function ScenesPanel(props: IScenesPanelProps) {
           />
         </div>
       )}
+      {type != type_scene.am_id_ream && (
+        <div
+          className={style.item}
+          onClick={() => handleChangeType(type_scene.am_id_ream)}
+        >
+          <p className={style.title}>Am I Dreaming???</p>
+          {/* <img className={style.img} src={scene.plane} alt="Plane" /> */}
+          <CldImage
+            className={style.img}
+            src={scene.am_i_dreaming}
+            alt="Plane"
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </div>
+      )}
     </div>
   );
 }

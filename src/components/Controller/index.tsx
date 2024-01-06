@@ -23,6 +23,7 @@ import ControllerIntheWoodsInSide from "./ControllerInTheWoods/InSide";
 
 import { type_scene, location_scene } from "@/files/const";
 import { SeoulInSide, SeoulOutSide } from "./Seoul";
+import { AmIDreamingSpace, AmIDreamingUnderWater } from "./AmIDreaming";
 
 export interface IControllerProps {}
 
@@ -93,6 +94,13 @@ export default function Controller(props: IControllerProps) {
           <SeoulOutSide />
         ) : (
           <SeoulInSide />
+        );
+      }
+      case type_scene.am_id_ream: {
+        return location == location_scene.outside ? (
+          <AmIDreamingSpace />
+        ) : (
+          <AmIDreamingUnderWater />
         );
       }
 

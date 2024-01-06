@@ -15,7 +15,8 @@
   @apply w-full my-2 lg:m-2 relative cursor-pointer;
 }
 .title {
-  @apply text-[#ccb79f] text-xl font-bold absolute lg:top-[50%] lg:left-[30%] top-[30%] left-[20%];
+  @apply w-fit h-fit p-2 text-[#ae9c88] rounded-xl text-xl font-bold absolute top-0 bottom-0 left-0 right-0 m-auto backdrop-blur-[20px];
+  -webkit-text-stroke: 1px rgba(71, 85, 105);
 }
 .img {
   @apply w-full;

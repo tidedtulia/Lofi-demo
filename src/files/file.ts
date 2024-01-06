@@ -31,6 +31,8 @@ export const scene = {
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1688044288/lofi/in-the-woods/inthewoods.png",
   seoul:
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1704521202/lofi/seoul/seoul-outside.176c7ba739a57d5ce1b8_s9ggks.png",
+  am_i_dreaming:
+    "https://res.cloudinary.com/dp7dspftn/image/upload/v1704551264/lofi/am_i_dreaming/space-pw.ac804a3b498e914527bd_qwxmdr.png",
 };
 
 //--------sound
@@ -186,5 +188,13 @@ export const video = {
     inside_night_rain:
       "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/seoul/inside-night-rain.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517446/lofi/seoul/inside-night-rain_jnkycr.mp4",
+  },
+  am_i_dreaming: {
+    space:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/am_i_dreaming/space.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517472/lofi/am_i_dreaming/space_gkcaxd.mp4",
+    under_water:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/am_i_dreaming/underwater.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517473/lofi/am_i_dreaming/underwater_epsk8m.mp4",
   },
 };

@@ -1,9 +1,9 @@
 //------------const
-export const max = 199;
-export const min = 19;
-export const type1 = 199;
-export const type2 = 19;
-export const type3 = 38;
+export const max = 200;
+export const min = 32;
+export const type1 = 200;
+export const type2 = 32;
+export const type3 = 39;
 
 //----------------------
 export const type_scene = {

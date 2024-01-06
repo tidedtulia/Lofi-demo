@@ -70,7 +70,7 @@ export default function InSide(props: IInSideProps) {
       <div className="absolute  lg:top-[40%] lg:left-[10%] top-[40%] left-[10%]">
         <Button title="Outside" type="position" action={hadleOutside} />
       </div>
-      <div className="absolute lg:top-[80%] lg:left-[10%] top-[70%] left-[30%]">
+      <div className="absolute lg:top-[80%] lg:left-[35%] top-[70%] left-[30%]">
         <Button
           title="Keyboard"
           type="audio"

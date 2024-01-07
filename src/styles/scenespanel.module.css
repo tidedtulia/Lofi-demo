@@ -1,5 +1,5 @@
 .container {
-  @apply w-40 lg:w-64 h-32 right-[10%] top-[30%] lg:h-80  absolute lg:top-[25%] lg:right-[7%]  rounded-lg backdrop-blur-[50px] border-2 overflow-y-scroll overflow-x-hidden opacity-100;
+  @apply flex flex-col justify-start items-stretch lg:gap-2 gap-1 lg:px-2 px-1 w-40 lg:w-64 h-32 right-[10%] top-[30%] lg:h-80  absolute lg:top-[25%] lg:right-[7%]  rounded-lg backdrop-blur-[50px] border-2 overflow-y-scroll overflow-x-hidden opacity-100;
   transition: opacity 0.5s;
 }
 .container::-webkit-scrollbar {
@@ -12,12 +12,12 @@
   /* @apply hidden; */
 }
 .item {
-  @apply w-full my-2 lg:m-2 relative cursor-pointer;
+  @apply w-full relative cursor-pointer rounded-lg;
 }
 .title {
-  @apply w-fit h-fit p-2 text-[#ae9c88] rounded-xl text-xl font-bold absolute top-0 bottom-0 left-0 right-0 m-auto backdrop-blur-[20px];
+  @apply w-fit h-fit lg:p-2 p-0 text-[#ae9c88] rounded-xl lg:text-xl text-base font-bold absolute top-0 bottom-0 left-0 right-0 m-auto backdrop-blur-[20px];
   -webkit-text-stroke: 1px rgba(71, 85, 105);
 }
 .img {
-  @apply w-full;
+  @apply w-full rounded-lg;
 }

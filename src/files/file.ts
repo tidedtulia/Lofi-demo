@@ -33,6 +33,8 @@ export const scene = {
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1704521202/lofi/seoul/seoul-outside.176c7ba739a57d5ce1b8_s9ggks.png",
   am_i_dreaming:
     "https://res.cloudinary.com/dp7dspftn/image/upload/v1704551264/lofi/am_i_dreaming/space-pw.ac804a3b498e914527bd_qwxmdr.png",
+  cozy_studio:
+    "https://res.cloudinary.com/dp7dspftn/image/upload/v1707043076/lofi/cozy_studio/cozyStudio.de922c920cb86d55e204_rhnv37.png",
 };
 
 //--------sound
@@ -196,5 +198,19 @@ export const video = {
     under_water:
       "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/am_i_dreaming/underwater.mp4" ||
       "https://res.cloudinary.com/dp7dspftn/video/upload/v1704517473/lofi/am_i_dreaming/underwater_epsk8m.mp4",
+  },
+  cozy_studio: {
+    day_stop_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/Cozy_Studio/Studio_day.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1707042232/lofi/cozy_studio/Studio_day_lqc39q.mp4",
+    day_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/Cozy_Studio/Studio_day_rain.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1707042231/lofi/cozy_studio/Studio_day_rain_rhabdo.mp4",
+    night_stop_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/Cozy_Studio/Studio_night.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1707042231/lofi/cozy_studio/Studio_night_fne6kp.mp4",
+    night_rain:
+      "https://lofico.nyc3.cdn.digitaloceanspaces.com/scenes/Cozy_Studio/Studio_night_rain.mp4" ||
+      "https://res.cloudinary.com/dp7dspftn/video/upload/v1707042231/lofi/cozy_studio/Studio_night_rain_zxfqhc.mp4",
   },
 };

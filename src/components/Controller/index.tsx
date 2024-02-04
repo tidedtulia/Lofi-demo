@@ -24,6 +24,7 @@ import ControllerIntheWoodsInSide from "./ControllerInTheWoods/InSide";
 import { type_scene, location_scene } from "@/files/const";
 import { SeoulInSide, SeoulOutSide } from "./Seoul";
 import { AmIDreamingSpace, AmIDreamingUnderWater } from "./AmIDreaming";
+import ControllerCozyStudio from "./CozyStudio";
 
 export interface IControllerProps {}
 
@@ -102,6 +103,10 @@ export default function Controller(props: IControllerProps) {
         ) : (
           <AmIDreamingUnderWater />
         );
+      }
+
+      case type_scene.cozy_studio: {
+        return <ControllerCozyStudio />;
       }
 
       default:

@@ -10,6 +10,7 @@ import InTheWoods from "./InTheWoods";
 import { type_scene } from "@/files/const";
 import Seoul from "./Seoul";
 import AmIDreaming from "./AmIDreaming";
+import CozyStudio from "./CozyStudio";
 
 export interface IVideoProps {}
 export default function Video(props: IVideoProps) {
@@ -44,6 +45,9 @@ export default function Video(props: IVideoProps) {
 
       case type_scene.am_id_ream:
         return <AmIDreaming />;
+
+      case type_scene.cozy_studio:
+        return <CozyStudio />;
 
       default:
         return <LofiCafe />;

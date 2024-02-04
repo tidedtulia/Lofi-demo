@@ -162,6 +162,22 @@ export default function ScenesPanel(props: IScenesPanelProps) {
           />
         </div>
       )}
+      {type != type_scene.cozy_studio && (
+        <div
+          className={style.item}
+          onClick={() => handleChangeType(type_scene.cozy_studio)}
+        >
+          <p className={style.title}>Cozy Studio</p>
+          <CldImage
+            className={style.img}
+            src={scene.cozy_studio}
+            alt="Plane"
+            width="0"
+            height="0"
+            sizes="100vw"
+          />
+        </div>
+      )}
     </div>
   );
 }

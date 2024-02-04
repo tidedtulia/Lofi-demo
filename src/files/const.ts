@@ -15,6 +15,7 @@ export const type_scene = {
   inthewoods: "inthewoods",
   seoul: "seoul",
   am_id_ream: "am_i_dream",
+  cozy_studio: "cozy_studio",
 };
 
 export const location_scene = {
